@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "72D7D4D11B8F3EB9BE8AFFF05B3C9C0F8AECD973",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "72D7D4D11B8F3EB9BE8AFFF05B3C9C0F8AECD973" : 9223372036854775807,
+    "235AD2BE7E28080C5C1EE4774E8FA36095D1AC3D" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "7CB6CA34-2631-40A0-A2F3-A9BD59A296C1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "72D7D4D11B8F3EB9BE8AFFF05B3C9C0F8AECD973" : "Whitelabel\/",
+    "235AD2BE7E28080C5C1EE4774E8FA36095D1AC3D" : "Golfclub-liebenau\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Whitelabel",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Whitelabel.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/EMart002\/golflcub-liebenau.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "235AD2BE7E28080C5C1EE4774E8FA36095D1AC3D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/EMart002\/WhitelabelApp",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "72D7D4D11B8F3EB9BE8AFFF05B3C9C0F8AECD973"
+    }
+  ]
+}

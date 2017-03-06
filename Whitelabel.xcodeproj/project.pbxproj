@@ -31,9 +31,7 @@
 		585C90151E6DFC5700A3B0E9 /* ViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585C8FF71E6DFC5700A3B0E9 /* ViewCell.swift */; };
 		585C90161E6DFC5700A3B0E9 /* ViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 585C8FF81E6DFC5700A3B0E9 /* ViewCell.xib */; };
 		585C90171E6DFC5700A3B0E9 /* XibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585C8FF91E6DFC5700A3B0E9 /* XibLoadable.swift */; };
-		585C901F1E6DFC8D00A3B0E9 /* Golfclub_liebenauTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585C901D1E6DFC8D00A3B0E9 /* Golfclub_liebenauTests.swift */; };
 		585C90201E6DFC8D00A3B0E9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 585C901E1E6DFC8D00A3B0E9 /* Info.plist */; };
-		585C90241E6DFC9A00A3B0E9 /* Golfclub_liebenauUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585C90221E6DFC9A00A3B0E9 /* Golfclub_liebenauUITests.swift */; };
 		585C90251E6DFC9A00A3B0E9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 585C90231E6DFC9A00A3B0E9 /* Info.plist */; };
 		585C902C1E6DFD5F00A3B0E9 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585C902B1E6DFD5F00A3B0E9 /* Content.swift */; };
 		585C902E1E6DFD6600A3B0E9 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585C902D1E6DFD6600A3B0E9 /* Section.swift */; };
@@ -86,9 +84,7 @@
 		585C8FF71E6DFC5700A3B0E9 /* ViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCell.swift; sourceTree = "<group>"; };
 		585C8FF81E6DFC5700A3B0E9 /* ViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewCell.xib; sourceTree = "<group>"; };
 		585C8FF91E6DFC5700A3B0E9 /* XibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibLoadable.swift; sourceTree = "<group>"; };
-		585C901D1E6DFC8D00A3B0E9 /* Golfclub_liebenauTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Golfclub_liebenauTests.swift; sourceTree = "<group>"; };
 		585C901E1E6DFC8D00A3B0E9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		585C90221E6DFC9A00A3B0E9 /* Golfclub_liebenauUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Golfclub_liebenauUITests.swift; sourceTree = "<group>"; };
 		585C90231E6DFC9A00A3B0E9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		585C902B1E6DFD5F00A3B0E9 /* Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Content.swift; path = "../../../Golfclub-liebenau/Golfclub-liebenau/Models/Content.swift"; sourceTree = "<group>"; };
 		585C902D1E6DFD6600A3B0E9 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Section.swift; path = "../../../Golfclub-liebenau/Golfclub-liebenau/Models/Section.swift"; sourceTree = "<group>"; };
@@ -178,7 +174,6 @@
 		585C901C1E6DFC8D00A3B0E9 /* WhitelabelTests */ = {
 			isa = PBXGroup;
 			children = (
-				585C901D1E6DFC8D00A3B0E9 /* Golfclub_liebenauTests.swift */,
 				585C901E1E6DFC8D00A3B0E9 /* Info.plist */,
 			);
 			path = WhitelabelTests;
@@ -187,7 +182,6 @@
 		585C90211E6DFC9A00A3B0E9 /* WhitelabelUITests */ = {
 			isa = PBXGroup;
 			children = (
-				585C90221E6DFC9A00A3B0E9 /* Golfclub_liebenauUITests.swift */,
 				585C90231E6DFC9A00A3B0E9 /* Info.plist */,
 			);
 			path = WhitelabelUITests;
@@ -484,7 +478,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				585C901F1E6DFC8D00A3B0E9 /* Golfclub_liebenauTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,7 +485,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				585C90241E6DFC9A00A3B0E9 /* Golfclub_liebenauUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

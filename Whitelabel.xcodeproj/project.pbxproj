@@ -10,6 +10,8 @@
 		3DE8A75232154824754D64E0 /* Pods_Whitelabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7871BDFB29A6CC996C92F78 /* Pods_Whitelabel.framework */; };
 		585C90201E6DFC8D00A3B0E9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 585C901E1E6DFC8D00A3B0E9 /* Info.plist */; };
 		585C90251E6DFC9A00A3B0E9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 585C90231E6DFC9A00A3B0E9 /* Info.plist */; };
+		586A2FC61E6E103300FC18FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 586A2FC21E6E103300FC18FF /* LaunchScreen.storyboard */; };
+		586A2FC71E6E103300FC18FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 586A2FC41E6E103300FC18FF /* Main.storyboard */; };
 		58DEEE721E6E0B8C00B9641C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DEEE4F1E6E0B8C00B9641C /* AppDelegate.swift */; };
 		58DEEE731E6E0B8C00B9641C /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DEEE501E6E0B8C00B9641C /* Dependencies.swift */; };
 		58DEEE741E6E0B8C00B9641C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58DEEE521E6E0B8C00B9641C /* LaunchScreen.storyboard */; };
@@ -64,6 +66,8 @@
 		585C8FC81E677CF300A3B0E9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		585C901E1E6DFC8D00A3B0E9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		585C90231E6DFC9A00A3B0E9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		586A2FC31E6E103300FC18FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Whitelabel/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		586A2FC51E6E103300FC18FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Whitelabel/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		58DEEE4F1E6E0B8C00B9641C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58DEEE501E6E0B8C00B9641C /* Dependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 		58DEEE531E6E0B8C00B9641C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -252,6 +256,8 @@
 		58DEEE661E6E0B8C00B9641C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				586A2FC21E6E103300FC18FF /* LaunchScreen.storyboard */,
+				586A2FC41E6E103300FC18FF /* Main.storyboard */,
 				58DEEE671E6E0B8C00B9641C /* ListView.storyboard */,
 				58DEEE681E6E0B8C00B9641C /* MapView.storyboard */,
 				58DEEE691E6E0B8C00B9641C /* OverviewHeaderView.swift */,
@@ -414,8 +420,10 @@
 				58DEEE781E6E0B8C00B9641C /* MapViewController.textClipping in Resources */,
 				58DEEE811E6E0B8C00B9641C /* MapView.storyboard in Resources */,
 				58DEEE861E6E0B8C00B9641C /* ViewCell.xib in Resources */,
+				586A2FC71E6E103300FC18FF /* Main.storyboard in Resources */,
 				58DEEE831E6E0B8C00B9641C /* OverviewHeaderView.xib in Resources */,
 				58DEEE751E6E0B8C00B9641C /* Main.storyboard in Resources */,
+				586A2FC61E6E103300FC18FF /* LaunchScreen.storyboard in Resources */,
 				58DEEE7E1E6E0B8C00B9641C /* debug.xcconfig in Resources */,
 				58DEEE7D1E6E0B8C00B9641C /* Assets.xcassets in Resources */,
 			);
@@ -540,6 +548,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		586A2FC21E6E103300FC18FF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				586A2FC31E6E103300FC18FF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		586A2FC41E6E103300FC18FF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				586A2FC51E6E103300FC18FF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		58DEEE521E6E0B8C00B9641C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

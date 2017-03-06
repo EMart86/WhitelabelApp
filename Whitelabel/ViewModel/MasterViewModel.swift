@@ -19,7 +19,7 @@ class MasterViewModel: MasterViewModelProtocol {
     let title = "Master"
     
     private(set) var content: [Content]?
-    private(set) var section: [Section]?
+    private(set) var sections: [Section]?
     private(set) var isLoading: Bool = false
     private var timer: Timer?
     
@@ -67,10 +67,10 @@ class MasterViewModel: MasterViewModelProtocol {
     }
     
     var numberOfItems: Int? {
-        guard let section = section else {
+        guard let sections = sections else {
             return nil
         }
-        return section.count
+        return sections.count
     }
     
     func nuberOfCellItems(at index: Int) -> Int {
@@ -129,16 +129,16 @@ class MasterViewModel: MasterViewModelProtocol {
     
     
     private func section(at index: Int) -> Section? {
-        guard let section = section,
-            section.indices.contains(index) else {
+        guard let sections = sections,
+            sections.indices.contains(index) else {
                 return nil
         }
-        return section[index]
+        return sections[index]
     }
     
     private func setupContent() {
         if loader != nil {
-            section = [
+            sections = [
                 Section(title: "Section 1", action: "Show more", content: nil)
             ]
         }

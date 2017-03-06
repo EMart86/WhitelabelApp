@@ -1,0 +1,761 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3DE8A75232154824754D64E0 /* Pods_Whitelabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7871BDFB29A6CC996C92F78 /* Pods_Whitelabel.framework */; };
+		585C90001E6DFC5700A3B0E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585C8FDE1E6DFC5700A3B0E9 /* AppDelegate.swift */; };
+		585C90011E6DFC5700A3B0E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 585C8FDF1E6DFC5700A3B0E9 /* Assets.xcassets */; };
+		585C90021E6DFC5700A3B0E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 585C8FE01E6DFC5700A3B0E9 /* LaunchScreen.storyboard */; };
+		585C90031E6DFC5700A3B0E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 585C8FE21E6DFC5700A3B0E9 /* Main.storyboard */; };
+		585C90041E6DFC5700A3B0E9 /* ContentLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585C8FE41E6DFC5700A3B0E9 /* ContentLoader.swift */; };
+		585C90051E6DFC5700A3B0E9 /* debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 585C8FE51E6DFC5700A3B0E9 /* debug.xcconfig */; };
+		585C90061E6DFC5700A3B0E9 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585C8FE61E6DFC5700A3B0E9 /* Dependencies.swift */; };
+		585C90071E6DFC5700A3B0E9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585C8FE71E6DFC5700A3B0E9 /* DetailViewController.swift */; };
+		585C90091E6DFC5700A3B0E9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 585C8FEA1E6DFC5700A3B0E9 /* Info.plist */; };
+		585C900A1E6DFC5700A3B0E9 /* ListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 585C8FEB1E6DFC5700A3B0E9 /* ListView.storyboard */; };
+		585C900B1E6DFC5700A3B0E9 /* LocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585C8FEC1E6DFC5700A3B0E9 /* LocationProvider.swift */; };
+		585C900C1E6DFC5700A3B0E9 /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 585C8FED1E6DFC5700A3B0E9 /* MapView.storyboard */; };
+		585C900D1E6DFC5700A3B0E9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585C8FEE1E6DFC5700A3B0E9 /* MapViewController.swift */; };
+		585C900E1E6DFC5700A3B0E9 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585C8FEF1E6DFC5700A3B0E9 /* MapViewModel.swift */; };
+		585C900F1E6DFC5700A3B0E9 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585C8FF01E6DFC5700A3B0E9 /* MasterViewController.swift */; };
+		585C90101E6DFC5700A3B0E9 /* MasterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585C8FF11E6DFC5700A3B0E9 /* MasterViewModel.swift */; };
+		585C90111E6DFC5700A3B0E9 /* OverviewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585C8FF31E6DFC5700A3B0E9 /* OverviewHeaderView.swift */; };
+		585C90121E6DFC5700A3B0E9 /* OverviewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 585C8FF41E6DFC5700A3B0E9 /* OverviewHeaderView.xib */; };
+		585C90131E6DFC5700A3B0E9 /* release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 585C8FF51E6DFC5700A3B0E9 /* release.xcconfig */; };
+		585C90141E6DFC5700A3B0E9 /* StoryboardLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585C8FF61E6DFC5700A3B0E9 /* StoryboardLoader.swift */; };
+		585C90151E6DFC5700A3B0E9 /* ViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585C8FF71E6DFC5700A3B0E9 /* ViewCell.swift */; };
+		585C90161E6DFC5700A3B0E9 /* ViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 585C8FF81E6DFC5700A3B0E9 /* ViewCell.xib */; };
+		585C90171E6DFC5700A3B0E9 /* XibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585C8FF91E6DFC5700A3B0E9 /* XibLoadable.swift */; };
+		585C901F1E6DFC8D00A3B0E9 /* Golfclub_liebenauTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585C901D1E6DFC8D00A3B0E9 /* Golfclub_liebenauTests.swift */; };
+		585C90201E6DFC8D00A3B0E9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 585C901E1E6DFC8D00A3B0E9 /* Info.plist */; };
+		585C90241E6DFC9A00A3B0E9 /* Golfclub_liebenauUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585C90221E6DFC9A00A3B0E9 /* Golfclub_liebenauUITests.swift */; };
+		585C90251E6DFC9A00A3B0E9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 585C90231E6DFC9A00A3B0E9 /* Info.plist */; };
+		585C902C1E6DFD5F00A3B0E9 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585C902B1E6DFD5F00A3B0E9 /* Content.swift */; };
+		585C902E1E6DFD6600A3B0E9 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585C902D1E6DFD6600A3B0E9 /* Section.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		585C8F831E64A87B00A3B0E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 585C8F611E64A87B00A3B0E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 585C8F681E64A87B00A3B0E9;
+			remoteInfo = "Golfclub-liebenau";
+		};
+		585C8F8E1E64A87B00A3B0E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 585C8F611E64A87B00A3B0E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 585C8F681E64A87B00A3B0E9;
+			remoteInfo = "Golfclub-liebenau";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3893743013E1C7768E871C30 /* Pods-Golfclub-liebenau.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Golfclub-liebenau.release.xcconfig"; path = "Pods/Target Support Files/Pods-Golfclub-liebenau/Pods-Golfclub-liebenau.release.xcconfig"; sourceTree = "<group>"; };
+		3F265F34E7D4D1E696DDC5A9 /* Pods-Whitelabel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whitelabel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Whitelabel/Pods-Whitelabel.debug.xcconfig"; sourceTree = "<group>"; };
+		585C8F691E64A87B00A3B0E9 /* Whitelabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whitelabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		585C8F821E64A87B00A3B0E9 /* WhitelabelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhitelabelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		585C8F8D1E64A87B00A3B0E9 /* WhitelabelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhitelabelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		585C8FC81E677CF300A3B0E9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		585C8FDE1E6DFC5700A3B0E9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		585C8FDF1E6DFC5700A3B0E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		585C8FE11E6DFC5700A3B0E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		585C8FE31E6DFC5700A3B0E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		585C8FE41E6DFC5700A3B0E9 /* ContentLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentLoader.swift; sourceTree = "<group>"; };
+		585C8FE51E6DFC5700A3B0E9 /* debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = debug.xcconfig; sourceTree = "<group>"; };
+		585C8FE61E6DFC5700A3B0E9 /* Dependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
+		585C8FE71E6DFC5700A3B0E9 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		585C8FEA1E6DFC5700A3B0E9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		585C8FEB1E6DFC5700A3B0E9 /* ListView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListView.storyboard; sourceTree = "<group>"; };
+		585C8FEC1E6DFC5700A3B0E9 /* LocationProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationProvider.swift; sourceTree = "<group>"; };
+		585C8FED1E6DFC5700A3B0E9 /* MapView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapView.storyboard; sourceTree = "<group>"; };
+		585C8FEE1E6DFC5700A3B0E9 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		585C8FEF1E6DFC5700A3B0E9 /* MapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		585C8FF01E6DFC5700A3B0E9 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		585C8FF11E6DFC5700A3B0E9 /* MasterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewModel.swift; sourceTree = "<group>"; };
+		585C8FF31E6DFC5700A3B0E9 /* OverviewHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewHeaderView.swift; sourceTree = "<group>"; };
+		585C8FF41E6DFC5700A3B0E9 /* OverviewHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverviewHeaderView.xib; sourceTree = "<group>"; };
+		585C8FF51E6DFC5700A3B0E9 /* release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = release.xcconfig; sourceTree = "<group>"; };
+		585C8FF61E6DFC5700A3B0E9 /* StoryboardLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardLoader.swift; sourceTree = "<group>"; };
+		585C8FF71E6DFC5700A3B0E9 /* ViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCell.swift; sourceTree = "<group>"; };
+		585C8FF81E6DFC5700A3B0E9 /* ViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewCell.xib; sourceTree = "<group>"; };
+		585C8FF91E6DFC5700A3B0E9 /* XibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibLoadable.swift; sourceTree = "<group>"; };
+		585C901D1E6DFC8D00A3B0E9 /* Golfclub_liebenauTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Golfclub_liebenauTests.swift; sourceTree = "<group>"; };
+		585C901E1E6DFC8D00A3B0E9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		585C90221E6DFC9A00A3B0E9 /* Golfclub_liebenauUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Golfclub_liebenauUITests.swift; sourceTree = "<group>"; };
+		585C90231E6DFC9A00A3B0E9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		585C902B1E6DFD5F00A3B0E9 /* Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Content.swift; path = "../../../Golfclub-liebenau/Golfclub-liebenau/Models/Content.swift"; sourceTree = "<group>"; };
+		585C902D1E6DFD6600A3B0E9 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Section.swift; path = "../../../Golfclub-liebenau/Golfclub-liebenau/Models/Section.swift"; sourceTree = "<group>"; };
+		6C2580805493A29D2F985D52 /* Pods-Whitelabel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whitelabel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Whitelabel/Pods-Whitelabel.release.xcconfig"; sourceTree = "<group>"; };
+		8666F7C71B54CCD45ADBD216 /* Pods_Golfclub_liebenau.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Golfclub_liebenau.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7871BDFB29A6CC996C92F78 /* Pods_Whitelabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whitelabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB28B0AB37CC38A767BD1A4A /* Pods-Golfclub-liebenau.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Golfclub-liebenau.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Golfclub-liebenau/Pods-Golfclub-liebenau.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		585C8F661E64A87B00A3B0E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE8A75232154824754D64E0 /* Pods_Whitelabel.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		585C8F7F1E64A87B00A3B0E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		585C8F8A1E64A87B00A3B0E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		585C8F601E64A87B00A3B0E9 = {
+			isa = PBXGroup;
+			children = (
+				585C8FDD1E6DFC5700A3B0E9 /* Whitelabel */,
+				585C901C1E6DFC8D00A3B0E9 /* WhitelabelTests */,
+				585C90211E6DFC9A00A3B0E9 /* WhitelabelUITests */,
+				585C8F6A1E64A87B00A3B0E9 /* Products */,
+				BE8E61A302221182803AC325 /* Pods */,
+				85F68CCC150E5A074D8844AD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		585C8F6A1E64A87B00A3B0E9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				585C8F691E64A87B00A3B0E9 /* Whitelabel.app */,
+				585C8F821E64A87B00A3B0E9 /* WhitelabelTests.xctest */,
+				585C8F8D1E64A87B00A3B0E9 /* WhitelabelUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		585C8FDD1E6DFC5700A3B0E9 /* Whitelabel */ = {
+			isa = PBXGroup;
+			children = (
+				585C90261E6DFCC300A3B0E9 /* Application */,
+				585C90271E6DFCCC00A3B0E9 /* Resources */,
+				585C90281E6DFCD900A3B0E9 /* Config */,
+				585C90291E6DFCEC00A3B0E9 /* View */,
+				585C902A1E6DFD1E00A3B0E9 /* ViewController */,
+				585C8FE41E6DFC5700A3B0E9 /* ContentLoader.swift */,
+				585C8FE61E6DFC5700A3B0E9 /* Dependencies.swift */,
+				585C8FEA1E6DFC5700A3B0E9 /* Info.plist */,
+				585C8FEC1E6DFC5700A3B0E9 /* LocationProvider.swift */,
+				585C8FEF1E6DFC5700A3B0E9 /* MapViewModel.swift */,
+				585C8FF11E6DFC5700A3B0E9 /* MasterViewModel.swift */,
+				585C8FF21E6DFC5700A3B0E9 /* Models */,
+				585C8FF61E6DFC5700A3B0E9 /* StoryboardLoader.swift */,
+			);
+			path = Whitelabel;
+			sourceTree = "<group>";
+		};
+		585C8FF21E6DFC5700A3B0E9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				585C902D1E6DFD6600A3B0E9 /* Section.swift */,
+				585C902B1E6DFD5F00A3B0E9 /* Content.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		585C901C1E6DFC8D00A3B0E9 /* WhitelabelTests */ = {
+			isa = PBXGroup;
+			children = (
+				585C901D1E6DFC8D00A3B0E9 /* Golfclub_liebenauTests.swift */,
+				585C901E1E6DFC8D00A3B0E9 /* Info.plist */,
+			);
+			path = WhitelabelTests;
+			sourceTree = "<group>";
+		};
+		585C90211E6DFC9A00A3B0E9 /* WhitelabelUITests */ = {
+			isa = PBXGroup;
+			children = (
+				585C90221E6DFC9A00A3B0E9 /* Golfclub_liebenauUITests.swift */,
+				585C90231E6DFC9A00A3B0E9 /* Info.plist */,
+			);
+			path = WhitelabelUITests;
+			sourceTree = "<group>";
+		};
+		585C90261E6DFCC300A3B0E9 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				585C8FDE1E6DFC5700A3B0E9 /* AppDelegate.swift */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		585C90271E6DFCCC00A3B0E9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				585C8FDF1E6DFC5700A3B0E9 /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		585C90281E6DFCD900A3B0E9 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				585C8FE51E6DFC5700A3B0E9 /* debug.xcconfig */,
+				585C8FF51E6DFC5700A3B0E9 /* release.xcconfig */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		585C90291E6DFCEC00A3B0E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				585C8FE01E6DFC5700A3B0E9 /* LaunchScreen.storyboard */,
+				585C8FE21E6DFC5700A3B0E9 /* Main.storyboard */,
+				585C8FEB1E6DFC5700A3B0E9 /* ListView.storyboard */,
+				585C8FED1E6DFC5700A3B0E9 /* MapView.storyboard */,
+				585C8FF31E6DFC5700A3B0E9 /* OverviewHeaderView.swift */,
+				585C8FF41E6DFC5700A3B0E9 /* OverviewHeaderView.xib */,
+				585C8FF71E6DFC5700A3B0E9 /* ViewCell.swift */,
+				585C8FF81E6DFC5700A3B0E9 /* ViewCell.xib */,
+				585C8FF91E6DFC5700A3B0E9 /* XibLoadable.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		585C902A1E6DFD1E00A3B0E9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				585C8FF01E6DFC5700A3B0E9 /* MasterViewController.swift */,
+				585C8FE71E6DFC5700A3B0E9 /* DetailViewController.swift */,
+				585C8FEE1E6DFC5700A3B0E9 /* MapViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		85F68CCC150E5A074D8844AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				585C8FC81E677CF300A3B0E9 /* CoreLocation.framework */,
+				8666F7C71B54CCD45ADBD216 /* Pods_Golfclub_liebenau.framework */,
+				D7871BDFB29A6CC996C92F78 /* Pods_Whitelabel.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE8E61A302221182803AC325 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB28B0AB37CC38A767BD1A4A /* Pods-Golfclub-liebenau.debug.xcconfig */,
+				3893743013E1C7768E871C30 /* Pods-Golfclub-liebenau.release.xcconfig */,
+				3F265F34E7D4D1E696DDC5A9 /* Pods-Whitelabel.debug.xcconfig */,
+				6C2580805493A29D2F985D52 /* Pods-Whitelabel.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		585C8F681E64A87B00A3B0E9 /* Whitelabel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 585C8F961E64A87B00A3B0E9 /* Build configuration list for PBXNativeTarget "Whitelabel" */;
+			buildPhases = (
+				4B75482EE54F0F59FA86CD66 /* [CP] Check Pods Manifest.lock */,
+				585C8F651E64A87B00A3B0E9 /* Sources */,
+				585C8F661E64A87B00A3B0E9 /* Frameworks */,
+				585C8F671E64A87B00A3B0E9 /* Resources */,
+				09D88B2E0422FEE231BC7F4A /* [CP] Embed Pods Frameworks */,
+				239C5FEF5DC0AC1486947D33 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Whitelabel;
+			productName = "Golfclub-liebenau";
+			productReference = 585C8F691E64A87B00A3B0E9 /* Whitelabel.app */;
+			productType = "com.apple.product-type.application";
+		};
+		585C8F811E64A87B00A3B0E9 /* WhitelabelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 585C8F991E64A87B00A3B0E9 /* Build configuration list for PBXNativeTarget "WhitelabelTests" */;
+			buildPhases = (
+				585C8F7E1E64A87B00A3B0E9 /* Sources */,
+				585C8F7F1E64A87B00A3B0E9 /* Frameworks */,
+				585C8F801E64A87B00A3B0E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				585C8F841E64A87B00A3B0E9 /* PBXTargetDependency */,
+			);
+			name = WhitelabelTests;
+			productName = "Golfclub-liebenauTests";
+			productReference = 585C8F821E64A87B00A3B0E9 /* WhitelabelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		585C8F8C1E64A87B00A3B0E9 /* WhitelabelUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 585C8F9C1E64A87B00A3B0E9 /* Build configuration list for PBXNativeTarget "WhitelabelUITests" */;
+			buildPhases = (
+				585C8F891E64A87B00A3B0E9 /* Sources */,
+				585C8F8A1E64A87B00A3B0E9 /* Frameworks */,
+				585C8F8B1E64A87B00A3B0E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				585C8F8F1E64A87B00A3B0E9 /* PBXTargetDependency */,
+			);
+			name = WhitelabelUITests;
+			productName = "Golfclub-liebenauUITests";
+			productReference = 585C8F8D1E64A87B00A3B0E9 /* WhitelabelUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		585C8F611E64A87B00A3B0E9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Martin Eberl";
+				TargetAttributes = {
+					585C8F681E64A87B00A3B0E9 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = ZZ3RP82Z38;
+						ProvisioningStyle = Automatic;
+					};
+					585C8F811E64A87B00A3B0E9 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = ZZ3RP82Z38;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 585C8F681E64A87B00A3B0E9;
+					};
+					585C8F8C1E64A87B00A3B0E9 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = ZZ3RP82Z38;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 585C8F681E64A87B00A3B0E9;
+					};
+				};
+			};
+			buildConfigurationList = 585C8F641E64A87B00A3B0E9 /* Build configuration list for PBXProject "Whitelabel" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 585C8F601E64A87B00A3B0E9;
+			productRefGroup = 585C8F6A1E64A87B00A3B0E9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				585C8F681E64A87B00A3B0E9 /* Whitelabel */,
+				585C8F811E64A87B00A3B0E9 /* WhitelabelTests */,
+				585C8F8C1E64A87B00A3B0E9 /* WhitelabelUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		585C8F671E64A87B00A3B0E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				585C90051E6DFC5700A3B0E9 /* debug.xcconfig in Resources */,
+				585C900C1E6DFC5700A3B0E9 /* MapView.storyboard in Resources */,
+				585C90121E6DFC5700A3B0E9 /* OverviewHeaderView.xib in Resources */,
+				585C900A1E6DFC5700A3B0E9 /* ListView.storyboard in Resources */,
+				585C90161E6DFC5700A3B0E9 /* ViewCell.xib in Resources */,
+				585C90031E6DFC5700A3B0E9 /* Main.storyboard in Resources */,
+				585C90011E6DFC5700A3B0E9 /* Assets.xcassets in Resources */,
+				585C90131E6DFC5700A3B0E9 /* release.xcconfig in Resources */,
+				585C90091E6DFC5700A3B0E9 /* Info.plist in Resources */,
+				585C90021E6DFC5700A3B0E9 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		585C8F801E64A87B00A3B0E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				585C90201E6DFC8D00A3B0E9 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		585C8F8B1E64A87B00A3B0E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				585C90251E6DFC9A00A3B0E9 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09D88B2E0422FEE231BC7F4A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Whitelabel/Pods-Whitelabel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		239C5FEF5DC0AC1486947D33 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Whitelabel/Pods-Whitelabel-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B75482EE54F0F59FA86CD66 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		585C8F651E64A87B00A3B0E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				585C90101E6DFC5700A3B0E9 /* MasterViewModel.swift in Sources */,
+				585C90151E6DFC5700A3B0E9 /* ViewCell.swift in Sources */,
+				585C90061E6DFC5700A3B0E9 /* Dependencies.swift in Sources */,
+				585C90111E6DFC5700A3B0E9 /* OverviewHeaderView.swift in Sources */,
+				585C90041E6DFC5700A3B0E9 /* ContentLoader.swift in Sources */,
+				585C90141E6DFC5700A3B0E9 /* StoryboardLoader.swift in Sources */,
+				585C902C1E6DFD5F00A3B0E9 /* Content.swift in Sources */,
+				585C900B1E6DFC5700A3B0E9 /* LocationProvider.swift in Sources */,
+				585C90001E6DFC5700A3B0E9 /* AppDelegate.swift in Sources */,
+				585C900F1E6DFC5700A3B0E9 /* MasterViewController.swift in Sources */,
+				585C902E1E6DFD6600A3B0E9 /* Section.swift in Sources */,
+				585C90071E6DFC5700A3B0E9 /* DetailViewController.swift in Sources */,
+				585C90171E6DFC5700A3B0E9 /* XibLoadable.swift in Sources */,
+				585C900D1E6DFC5700A3B0E9 /* MapViewController.swift in Sources */,
+				585C900E1E6DFC5700A3B0E9 /* MapViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		585C8F7E1E64A87B00A3B0E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				585C901F1E6DFC8D00A3B0E9 /* Golfclub_liebenauTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		585C8F891E64A87B00A3B0E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				585C90241E6DFC9A00A3B0E9 /* Golfclub_liebenauUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		585C8F841E64A87B00A3B0E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 585C8F681E64A87B00A3B0E9 /* Whitelabel */;
+			targetProxy = 585C8F831E64A87B00A3B0E9 /* PBXContainerItemProxy */;
+		};
+		585C8F8F1E64A87B00A3B0E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 585C8F681E64A87B00A3B0E9 /* Whitelabel */;
+			targetProxy = 585C8F8E1E64A87B00A3B0E9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		585C8FE01E6DFC5700A3B0E9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				585C8FE11E6DFC5700A3B0E9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		585C8FE21E6DFC5700A3B0E9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				585C8FE31E6DFC5700A3B0E9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		585C8F941E64A87B00A3B0E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		585C8F951E64A87B00A3B0E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		585C8F971E64A87B00A3B0E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F265F34E7D4D1E696DDC5A9 /* Pods-Whitelabel.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZZ3RP82Z38;
+				INFOPLIST_FILE = Whitelabel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.emart-software.Whitelabel";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				XCC_CONTENT_URL = "https:/$()/";
+			};
+			name = Debug;
+		};
+		585C8F981E64A87B00A3B0E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C2580805493A29D2F985D52 /* Pods-Whitelabel.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZZ3RP82Z38;
+				INFOPLIST_FILE = Whitelabel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.emart-software.Whitelabel";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				XCC_CONTENT_URL = "https:/$()/";
+			};
+			name = Release;
+		};
+		585C8F9A1E64A87B00A3B0E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = ZZ3RP82Z38;
+				INFOPLIST_FILE = "Golfclub-liebenauTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.emart-software.Golfclub-liebenauTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Whitelabel.app/Whitelabel";
+			};
+			name = Debug;
+		};
+		585C8F9B1E64A87B00A3B0E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = ZZ3RP82Z38;
+				INFOPLIST_FILE = "Golfclub-liebenauTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.emart-software.Golfclub-liebenauTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Whitelabel.app/Whitelabel";
+			};
+			name = Release;
+		};
+		585C8F9D1E64A87B00A3B0E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = ZZ3RP82Z38;
+				INFOPLIST_FILE = "Golfclub-liebenauUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.emart-software.Golfclub-liebenauUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Golfclub-liebenau";
+			};
+			name = Debug;
+		};
+		585C8F9E1E64A87B00A3B0E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = ZZ3RP82Z38;
+				INFOPLIST_FILE = "Golfclub-liebenauUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.emart-software.Golfclub-liebenauUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Golfclub-liebenau";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		585C8F641E64A87B00A3B0E9 /* Build configuration list for PBXProject "Whitelabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				585C8F941E64A87B00A3B0E9 /* Debug */,
+				585C8F951E64A87B00A3B0E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		585C8F961E64A87B00A3B0E9 /* Build configuration list for PBXNativeTarget "Whitelabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				585C8F971E64A87B00A3B0E9 /* Debug */,
+				585C8F981E64A87B00A3B0E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		585C8F991E64A87B00A3B0E9 /* Build configuration list for PBXNativeTarget "WhitelabelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				585C8F9A1E64A87B00A3B0E9 /* Debug */,
+				585C8F9B1E64A87B00A3B0E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		585C8F9C1E64A87B00A3B0E9 /* Build configuration list for PBXNativeTarget "WhitelabelUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				585C8F9D1E64A87B00A3B0E9 /* Debug */,
+				585C8F9E1E64A87B00A3B0E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 585C8F611E64A87B00A3B0E9 /* Project object */;
+}

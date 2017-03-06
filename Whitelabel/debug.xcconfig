@@ -1,0 +1,3 @@
+#include "Pods/Target Support Files/Pods-Whitelabel/Pods-Whitelabel.debug.xcconfig"
+
+XCC_CONTENT_URL = https:/$()/

@@ -18,12 +18,12 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
-	<key>CONTENT_LOAD_PATH</key>
+	<key>CONTENT_PATH</key>
 	<string>$(XCC_CONTENT_URL)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Die Geoerkennung wird in der App zum Sortieren von Partnerclubs in ihrer Nähe verwendet</string>
+	<string></string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

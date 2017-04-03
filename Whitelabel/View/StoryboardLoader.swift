@@ -16,6 +16,7 @@ enum StoryboardLoader {
     
     case MapView
     case ListView
+    case Detail
     
     var content: Content {
         switch self {
@@ -23,6 +24,8 @@ enum StoryboardLoader {
             return Content(storyboardName: "MapView", storyboardId: "MapViewController")
         case .ListView:
             return Content(storyboardName: "ListView", storyboardId: "MasterViewController")
+        case .Detail:
+            return Content(storyboardName: "Detail", storyboardId: "DetailViewController")
         }
     }
 }

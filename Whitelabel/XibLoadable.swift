@@ -1,6 +1,6 @@
 //
 //  XibLoadable.swift
-//  Whitelabel
+//  Golfclub-liebenau
 //
 //  Created by Martin Eberl on 01.03.17.
 //  Copyright © 2017 Martin Eberl. All rights reserved.
@@ -29,8 +29,12 @@ extension UITableView {
         register(xibLoadable.nib(), forCellReuseIdentifier: xibLoadable.xibName)
     }
     
-    func dequeueCell<T: XibLoadable>() -> T? {
-        return dequeueReusableCell(withIdentifier: T.xibName) as? T
+    func dequeueCell<T: XibLoadable>(at indexPath: IndexPath? = nil) -> T? {
+        if let indexPath = indexPath {
+            return dequeueReusableCell(withIdentifier: T.xibName, for: indexPath) as? T
+        } else {
+            return dequeueReusableCell(withIdentifier: T.xibName) as? T
+        }
     }
     
     func registerHeaderFooterView(xibLoadable: XibLoadable.Type) {

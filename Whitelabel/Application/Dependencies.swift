@@ -15,7 +15,7 @@ class Dependencies {
     let locationProvider: LocationProvider?
     
     private init() {
-        if let urlString = Bundle.main.infoDictionary?["CLUB_LOAD_PATH"] as? String,
+        if let urlString = Bundle.main.infoDictionary?["LOAD_PATH"] as? String,
             let url = URL(string: urlString) {
             loader = ContentLoader(url: url)
         } else {

@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		3DE8A75232154824754D64E0 /* Pods_Whitelabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7871BDFB29A6CC996C92F78 /* Pods_Whitelabel.framework */; };
+		580EAA841E92E09F00AD2345 /* NSMutableAttributesString+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580EAA7E1E92E09F00AD2345 /* NSMutableAttributesString+Font.swift */; };
+		580EAA851E92E09F00AD2345 /* String+HTMLAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580EAA7F1E92E09F00AD2345 /* String+HTMLAttributedString.swift */; };
+		580EAA861E92E09F00AD2345 /* String+HTMLTrimming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580EAA801E92E09F00AD2345 /* String+HTMLTrimming.swift */; };
+		580EAA871E92E09F00AD2345 /* UIColor+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580EAA811E92E09F00AD2345 /* UIColor+AppColors.swift */; };
+		580EAA881E92E09F00AD2345 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580EAA821E92E09F00AD2345 /* UIColor+Hex.swift */; };
+		580EAA891E92E09F00AD2345 /* XibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580EAA831E92E09F00AD2345 /* XibLoadable.swift */; };
+		580EAA8B1E92E44500AD2345 /* default.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 580EAA8A1E92E44500AD2345 /* default.xcconfig */; };
+		580EAA8D1E92EA1E00AD2345 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580EAA8C1E92EA1E00AD2345 /* Appearance.swift */; };
 		585C90201E6DFC8D00A3B0E9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 585C901E1E6DFC8D00A3B0E9 /* Info.plist */; };
 		585C90251E6DFC9A00A3B0E9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 585C90231E6DFC9A00A3B0E9 /* Info.plist */; };
 		586A2FC61E6E103300FC18FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 586A2FC21E6E103300FC18FF /* LaunchScreen.storyboard */; };
@@ -33,7 +41,6 @@
 		58DEEE841E6E0B8C00B9641C /* StoryboardLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DEEE6B1E6E0B8C00B9641C /* StoryboardLoader.swift */; };
 		58DEEE851E6E0B8C00B9641C /* ViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DEEE6C1E6E0B8C00B9641C /* ViewCell.swift */; };
 		58DEEE861E6E0B8C00B9641C /* ViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58DEEE6D1E6E0B8C00B9641C /* ViewCell.xib */; };
-		58DEEE871E6E0B8C00B9641C /* XibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DEEE6E1E6E0B8C00B9641C /* XibLoadable.swift */; };
 		58DEEE881E6E0B8C00B9641C /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DEEE701E6E0B8C00B9641C /* MapViewModel.swift */; };
 		58DEEE891E6E0B8C00B9641C /* MasterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DEEE711E6E0B8C00B9641C /* MasterViewModel.swift */; };
 		58DEEE8B1E6E0C0800B9641C /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DEEE8A1E6E0C0800B9641C /* Section.swift */; };
@@ -60,6 +67,14 @@
 /* Begin PBXFileReference section */
 		3893743013E1C7768E871C30 /* Pods-Golfclub-liebenau.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Golfclub-liebenau.release.xcconfig"; path = "Pods/Target Support Files/Pods-Golfclub-liebenau/Pods-Golfclub-liebenau.release.xcconfig"; sourceTree = "<group>"; };
 		3F265F34E7D4D1E696DDC5A9 /* Pods-Whitelabel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whitelabel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Whitelabel/Pods-Whitelabel.debug.xcconfig"; sourceTree = "<group>"; };
+		580EAA7E1E92E09F00AD2345 /* NSMutableAttributesString+Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributesString+Font.swift"; sourceTree = "<group>"; };
+		580EAA7F1E92E09F00AD2345 /* String+HTMLAttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+HTMLAttributedString.swift"; sourceTree = "<group>"; };
+		580EAA801E92E09F00AD2345 /* String+HTMLTrimming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+HTMLTrimming.swift"; sourceTree = "<group>"; };
+		580EAA811E92E09F00AD2345 /* UIColor+AppColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+AppColors.swift"; sourceTree = "<group>"; };
+		580EAA821E92E09F00AD2345 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		580EAA831E92E09F00AD2345 /* XibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibLoadable.swift; sourceTree = "<group>"; };
+		580EAA8A1E92E44500AD2345 /* default.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = default.xcconfig; sourceTree = "<group>"; };
+		580EAA8C1E92EA1E00AD2345 /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		585C8F691E64A87B00A3B0E9 /* Whitelabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whitelabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		585C8F821E64A87B00A3B0E9 /* WhitelabelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhitelabelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		585C8F8D1E64A87B00A3B0E9 /* WhitelabelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhitelabelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,7 +104,6 @@
 		58DEEE6B1E6E0B8C00B9641C /* StoryboardLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardLoader.swift; sourceTree = "<group>"; };
 		58DEEE6C1E6E0B8C00B9641C /* ViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCell.swift; sourceTree = "<group>"; };
 		58DEEE6D1E6E0B8C00B9641C /* ViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewCell.xib; sourceTree = "<group>"; };
-		58DEEE6E1E6E0B8C00B9641C /* XibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibLoadable.swift; sourceTree = "<group>"; };
 		58DEEE701E6E0B8C00B9641C /* MapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		58DEEE711E6E0B8C00B9641C /* MasterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewModel.swift; sourceTree = "<group>"; };
 		58DEEE8A1E6E0C0800B9641C /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
@@ -126,10 +140,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		580EAA7D1E92E08700AD2345 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				580EAA7E1E92E09F00AD2345 /* NSMutableAttributesString+Font.swift */,
+				580EAA7F1E92E09F00AD2345 /* String+HTMLAttributedString.swift */,
+				580EAA801E92E09F00AD2345 /* String+HTMLTrimming.swift */,
+				580EAA811E92E09F00AD2345 /* UIColor+AppColors.swift */,
+				580EAA821E92E09F00AD2345 /* UIColor+Hex.swift */,
+				580EAA831E92E09F00AD2345 /* XibLoadable.swift */,
+			);
+			name = Extension;
+			path = Whitelabel;
+			sourceTree = "<group>";
+		};
 		585C8F601E64A87B00A3B0E9 = {
 			isa = PBXGroup;
 			children = (
 				585C8FDD1E6DFC5700A3B0E9 /* Whitelabel */,
+				580EAA7D1E92E08700AD2345 /* Extension */,
 				585C901C1E6DFC8D00A3B0E9 /* WhitelabelTests */,
 				585C90211E6DFC9A00A3B0E9 /* WhitelabelUITests */,
 				585C8F6A1E64A87B00A3B0E9 /* Products */,
@@ -187,6 +216,7 @@
 				58DEEE5B1E6E0B8C00B9641C /* Info.plist */,
 				58DEEE4F1E6E0B8C00B9641C /* AppDelegate.swift */,
 				58DEEE501E6E0B8C00B9641C /* Dependencies.swift */,
+				580EAA8C1E92EA1E00AD2345 /* Appearance.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -247,6 +277,7 @@
 		58DEEE631E6E0B8C00B9641C /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				580EAA8A1E92E44500AD2345 /* default.xcconfig */,
 				58DEEE641E6E0B8C00B9641C /* debug.xcconfig */,
 				58DEEE651E6E0B8C00B9641C /* release.xcconfig */,
 			);
@@ -265,7 +296,6 @@
 				58DEEE6B1E6E0B8C00B9641C /* StoryboardLoader.swift */,
 				58DEEE6C1E6E0B8C00B9641C /* ViewCell.swift */,
 				58DEEE6D1E6E0B8C00B9641C /* ViewCell.xib */,
-				58DEEE6E1E6E0B8C00B9641C /* XibLoadable.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -415,6 +445,7 @@
 			files = (
 				58DEEE7A1E6E0B8C00B9641C /* Info.plist in Resources */,
 				58DEEE801E6E0B8C00B9641C /* ListView.storyboard in Resources */,
+				580EAA8B1E92E44500AD2345 /* default.xcconfig in Resources */,
 				58DEEE741E6E0B8C00B9641C /* LaunchScreen.storyboard in Resources */,
 				58DEEE7F1E6E0B8C00B9641C /* release.xcconfig in Resources */,
 				58DEEE781E6E0B8C00B9641C /* MapViewController.textClipping in Resources */,
@@ -500,19 +531,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				580EAA871E92E09F00AD2345 /* UIColor+AppColors.swift in Sources */,
 				58DEEE791E6E0B8C00B9641C /* MasterViewController.swift in Sources */,
 				58DEEE761E6E0B8C00B9641C /* DetailViewController.swift in Sources */,
 				58DEEE841E6E0B8C00B9641C /* StoryboardLoader.swift in Sources */,
+				580EAA8D1E92EA1E00AD2345 /* Appearance.swift in Sources */,
 				58DEEE8B1E6E0C0800B9641C /* Section.swift in Sources */,
 				58DEEE731E6E0B8C00B9641C /* Dependencies.swift in Sources */,
 				58DEEE851E6E0B8C00B9641C /* ViewCell.swift in Sources */,
+				580EAA861E92E09F00AD2345 /* String+HTMLTrimming.swift in Sources */,
 				58DEEE7C1E6E0B8C00B9641C /* ContentLoader.swift in Sources */,
+				580EAA881E92E09F00AD2345 /* UIColor+Hex.swift in Sources */,
 				58DEEE891E6E0B8C00B9641C /* MasterViewModel.swift in Sources */,
 				58DEEE8D1E6E0C1B00B9641C /* Content.swift in Sources */,
 				58DEEE7B1E6E0B8C00B9641C /* LocationProvider.swift in Sources */,
+				580EAA841E92E09F00AD2345 /* NSMutableAttributesString+Font.swift in Sources */,
+				580EAA851E92E09F00AD2345 /* String+HTMLAttributedString.swift in Sources */,
 				58DEEE721E6E0B8C00B9641C /* AppDelegate.swift in Sources */,
-				58DEEE871E6E0B8C00B9641C /* XibLoadable.swift in Sources */,
 				58DEEE821E6E0B8C00B9641C /* OverviewHeaderView.swift in Sources */,
+				580EAA891E92E09F00AD2345 /* XibLoadable.swift in Sources */,
 				58DEEE771E6E0B8C00B9641C /* MapViewController.swift in Sources */,
 				58DEEE881E6E0B8C00B9641C /* MapViewModel.swift in Sources */,
 			);

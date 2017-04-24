@@ -24,7 +24,6 @@
 		580EAA921E94202200AD2345 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580EAA911E94202200AD2345 /* Storage.swift */; };
 		580EAA951E94249E00AD2345 /* Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580EAA941E94249E00AD2345 /* Chainable.swift */; };
 		580EAA971E942FDE00AD2345 /* SqliteStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580EAA961E942FDE00AD2345 /* SqliteStorage.swift */; };
-		580EAA991E94338100AD2345 /* PersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580EAA981E94338100AD2345 /* PersistentContainer.swift */; };
 		585C90201E6DFC8D00A3B0E9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 585C901E1E6DFC8D00A3B0E9 /* Info.plist */; };
 		585C90251E6DFC9A00A3B0E9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 585C90231E6DFC9A00A3B0E9 /* Info.plist */; };
 		586A2FC61E6E103300FC18FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 586A2FC21E6E103300FC18FF /* LaunchScreen.storyboard */; };
@@ -92,7 +91,6 @@
 		580EAA911E94202200AD2345 /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		580EAA941E94249E00AD2345 /* Chainable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chainable.swift; sourceTree = "<group>"; };
 		580EAA961E942FDE00AD2345 /* SqliteStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SqliteStorage.swift; sourceTree = "<group>"; };
-		580EAA981E94338100AD2345 /* PersistentContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentContainer.swift; sourceTree = "<group>"; };
 		585C8F691E64A87B00A3B0E9 /* Whitelabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whitelabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		585C8F821E64A87B00A3B0E9 /* WhitelabelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhitelabelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		585C8F8D1E64A87B00A3B0E9 /* WhitelabelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhitelabelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,7 +187,6 @@
 				580EAA8F1E941FE400AD2345 /* Store.swift */,
 				580EAA911E94202200AD2345 /* Storage.swift */,
 				580EAA961E942FDE00AD2345 /* SqliteStorage.swift */,
-				580EAA981E94338100AD2345 /* PersistentContainer.swift */,
 			);
 			name = Store;
 			sourceTree = "<group>";
@@ -588,7 +585,6 @@
 				58DEEE761E6E0B8C00B9641C /* DetailViewController.swift in Sources */,
 				58DEEE841E6E0B8C00B9641C /* StoryboardLoader.swift in Sources */,
 				580EAA8D1E92EA1E00AD2345 /* Appearance.swift in Sources */,
-				580EAA991E94338100AD2345 /* PersistentContainer.swift in Sources */,
 				58DEEE8B1E6E0C0800B9641C /* Section.swift in Sources */,
 				58DEEE731E6E0B8C00B9641C /* Dependencies.swift in Sources */,
 				58DEEE851E6E0B8C00B9641C /* ViewCell.swift in Sources */,

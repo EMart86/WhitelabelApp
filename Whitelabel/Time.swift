@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct Time {
+struct TimeModel {
     
 }

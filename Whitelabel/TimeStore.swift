@@ -8,8 +8,9 @@
 
 import Foundation
 
-final class TimeStore: Store {
-    internal var models: Observable<[StoreModel]>?
+struct TimeStore: Store {
+    internal var storage: Storage
+    internal var models: Observable<[Any]>?
 
     
 }

@@ -8,10 +8,18 @@
 
 import Foundation
 
+protocol Query {
+}
+class ObjectProvider {
+    func observable<ObservableValue>(where query: Query) -> Observable<[ObservableValue]>? {
+        return nil
+    }
+}
+
 protocol Storage {
-    func createObservable(predicate: NSPredicate?, sortDescriptors: [NSSortDescriptor]?) -> Observable<[StoreModel]>
-    func insert(model: StoreModel)
-    func remove(model: StoreModel)
+    var provoder: ObjectProvider { get }
+    func insert(model: Any)
+    func remove(model: Any)
     func commit()
     func rollback()
 }

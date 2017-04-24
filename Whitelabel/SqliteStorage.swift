@@ -10,23 +10,67 @@ import Foundation
 import CoreData
 
 struct ManagedObjectStore: Store {
-    private(set) var storage: Storage
-    private(set) var models: Observable<[StoreModel]>? = nil
+    struct ManagedObjectQuery: Query {
+        let entityName: String
+        let predicate: NSPredicate?
+        let sortDescriptors: [NSSortDescriptor]?
+    }
     
-    init(storage: Storage, predicate: NSPredicate?, sortDescriptors: [NSSortDescriptor]?) {
+    private(set) var storage: Storage
+    private(set) var models: Observable<[Any]>? = nil
+    
+    init(storage: Storage, entityName: String, predicate: NSPredicate?, sortDescriptors: [NSSortDescriptor]?) {
         self.storage = storage
-        
-        models = storage.createObservable(predicate: predicate, sortDescriptors: sortDescriptors)
+        models = storage.provoder.observable(where: ManagedObjectQuery(entityName: entityName, predicate: predicate, sortDescriptors: sortDescriptors))
+    }
+    
+}
+
+final class ManagedObjectObservable: Observable<[NSManagedObject]> {
+    let fetchedResultsController: NSFetchedResultsController<NSFetchRequestResult>
+    init(_ fetchedResultsController: NSFetchedResultsController<NSFetchRequestResult>) {
+        self.fetchedResultsController = fetchedResultsController
+        super.init()
+        value = fetchedResultsController.fetchedObjects as? [NSManagedObject]
+        fetchedResultsController.delegate = self
+    }
+}
+
+extension ManagedObjectObservable: NSFetchedResultsControllerDelegate  {
+    @nonobjc public func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        value = fetchedResultsController.fetchedObjects as! [NSManagedObject]?
+    }
+}
+
+final class ManagedObjectProvider: ObjectProvider {
+    private let managedObjectContext: NSManagedObjectContext
+    init(_ managedObjectContext: NSManagedObjectContext) {
+        self.managedObjectContext = managedObjectContext
+    }
+    
+    override func observable<NSManagedObject>(where query: Query) -> Observable<[NSManagedObject]>? {
+        guard let query = query as? ManagedObjectStore.ManagedObjectQuery else {
+            assertionFailure("Expecting ManagedObjectStore.ManagedObjectQuery as closure parameter")
+            return nil
+        }
+        return ManagedObjectObservable(
+            NSFetchedResultsController(fetchRequest: NSFetchRequest(entityName: query.entityName),
+                                       managedObjectContext: managedObjectContext,
+                                       sectionNameKeyPath: nil,
+                                       cacheName: nil)) as? Observable<[NSManagedObject]>
     }
 }
 
 final class SqliteStorage<T: NSManagedObject>: Storage {
+    internal var provoder: ObjectProvider = ObjectProvider()
+
     private let momdName: String
     private let sqlFileUrl: URL?
     
     init(momdName: String = Bundle.main.bundleIdentifier!, sqlFileUrl: URL? = nil) {
         self.momdName = momdName
         self.sqlFileUrl = sqlFileUrl
+        provoder = ManagedObjectProvider(managedObjectContext)
     }
     
     lazy var managedObjectContext: NSManagedObjectContext = {
@@ -39,18 +83,14 @@ final class SqliteStorage<T: NSManagedObject>: Storage {
         }
     }()
     
-    func createObservable(predicate: NSPredicate?, sortDescriptors: [NSSortDescriptor]?) -> Observable<[StoreModel]> {
-        return managedObjectContext.fetch(NSFetchRequest())
-    }
-    
-    func insert(model: StoreModel) {
+    func insert(model: Any) {
         guard let model = model as? NSManagedObject else {
             return
         }
         managedObjectContext.insert(model)
     }
     
-    func remove(model: StoreModel) {
+    func remove(model: Any) {
         guard let model = model as? NSManagedObject else {
             return
         }

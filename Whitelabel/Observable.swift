@@ -39,7 +39,7 @@ struct DestroyableObserver<T>: Destroyable {
     }
 }
 
-open class Observable<T> {
+open class Observable<T>: NSObject {
     private var observers = [DestroyableObserver<T>]()
 
     var value: T? {

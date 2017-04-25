@@ -18,7 +18,7 @@ open class ManagedObjectStore: Store {
         }
         return observableModels as? Observable<[T]>
     }
-
+    
     struct ManagedObjectQuery: Query {
         let entity: NSManagedObject.Type
         let predicate: NSPredicate?
@@ -47,6 +47,12 @@ final class ManagedObjectObservable: Observable<[NSManagedObject]> {
         super.init()
         value = fetchedResultsController.fetchedObjects as? [NSManagedObject]
         fetchedResultsController.delegate = self
+        do {
+            try fetchedResultsController.performFetch()
+        } catch {
+            let nserror = error as NSError
+            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        }
     }
 }
 
@@ -64,20 +70,28 @@ final class ManagedObjectProvider: ObjectProvider {
     
     override func observable<T: NSManagedObject>(where query: Query) -> Observable<[T]>? {
         guard let query = query as? ManagedObjectStore.ManagedObjectQuery else {
-            assertionFailure("Expecting ManagedObjectStore.ManagedObjectQuery as closure parameter")
+                assertionFailure("Expecting ManagedObjectStore.ManagedObjectQuery as closure parameter")
+                return nil
+        }
+        guard let request: NSFetchRequest<T> = T.fetchRequest() as? NSFetchRequest<T> else {
             return nil
         }
-        return ManagedObjectObservable(
-            NSFetchedResultsController(fetchRequest: NSFetchRequest(entityName: String(describing: query.entity)),
-                                       managedObjectContext: managedObjectContext,
-                                       sectionNameKeyPath: nil,
-                                       cacheName: nil)) as? Observable<[T]>
+        
+        request.fetchBatchSize = 20
+        request.predicate = query.predicate
+        request.sortDescriptors = query.sortDescriptors
+        
+        let controller = NSFetchedResultsController<T>(fetchRequest: request,
+                                                       managedObjectContext: managedObjectContext,
+                                                       sectionNameKeyPath: nil,
+                                                       cacheName: nil)
+        return ManagedObjectObservable(controller as! NSFetchedResultsController<NSFetchRequestResult>) as? Observable<[T]>
     }
 }
 
 final class SqliteStorage<T: NSManagedObject>: Storage {
     internal var provider: ObjectProvider = ObjectProvider()
-
+    
     private let momdName: String
     private let sqlFileUrl: URL?
     

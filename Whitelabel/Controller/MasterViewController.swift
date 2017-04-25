@@ -175,8 +175,8 @@ extension MasterViewController: MasterViewModelDelegate {
     }
     
     func showList(with content: [Content]) {
-        let viewModel = MasterViewModel(content: content)
-        let viewController = MasterViewController.create(viewModel)
-        navigationController?.pushViewController(viewController, animated: true)
+//        let viewModel = MasterViewModel(content: content)
+//        let viewController = MasterViewController.create(viewModel)
+//        navigationController?.pushViewController(viewController, animated: true)
     }
 }

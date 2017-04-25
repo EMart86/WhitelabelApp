@@ -13,6 +13,7 @@ class Dependencies {
     
     let loader: ContentLoader?
     let locationProvider: LocationProvider?
+    let timeStore: TimeStore
     
     private init() {
         if let urlString = Bundle.main.infoDictionary?["LOAD_PATH"] as? String,
@@ -23,5 +24,6 @@ class Dependencies {
         }
         
         locationProvider = LocationProvider()
+        timeStore = TimeStore()
     }
 }

@@ -9,19 +9,33 @@
 import Foundation
 import CoreData
 
-struct ManagedObjectStore: Store {
+open class ManagedObjectStore: Store {
+    private var observableModels: Observable<[NSManagedObject]>?
+    
+    func models<T>() -> Observable<[T]>? {
+        if observableModels == nil {
+            observableModels = storage.provider.observable(where: ManagedObjectQuery(entity: entity, predicate: predicate, sortDescriptors: sortDescriptors))
+        }
+        return observableModels as? Observable<[T]>
+    }
+
     struct ManagedObjectQuery: Query {
-        let entityName: String
+        let entity: NSManagedObject.Type
         let predicate: NSPredicate?
         let sortDescriptors: [NSSortDescriptor]?
     }
     
     private(set) var storage: Storage
-    private(set) var models: Observable<[Any]>? = nil
+    private let entity: NSManagedObject.Type
+    private let predicate: NSPredicate?
+    private let sortDescriptors: [NSSortDescriptor]?
     
-    init(storage: Storage, entityName: String, predicate: NSPredicate?, sortDescriptors: [NSSortDescriptor]?) {
+    
+    init(storage: Storage, entity: NSManagedObject.Type, predicate: NSPredicate?, sortDescriptors: [NSSortDescriptor]?) {
         self.storage = storage
-        models = storage.provoder.observable(where: ManagedObjectQuery(entityName: entityName, predicate: predicate, sortDescriptors: sortDescriptors))
+        self.entity = entity
+        self.predicate = predicate
+        self.sortDescriptors = sortDescriptors
     }
     
 }
@@ -48,21 +62,21 @@ final class ManagedObjectProvider: ObjectProvider {
         self.managedObjectContext = managedObjectContext
     }
     
-    override func observable<NSManagedObject>(where query: Query) -> Observable<[NSManagedObject]>? {
+    override func observable<T: NSManagedObject>(where query: Query) -> Observable<[T]>? {
         guard let query = query as? ManagedObjectStore.ManagedObjectQuery else {
             assertionFailure("Expecting ManagedObjectStore.ManagedObjectQuery as closure parameter")
             return nil
         }
         return ManagedObjectObservable(
-            NSFetchedResultsController(fetchRequest: NSFetchRequest(entityName: query.entityName),
+            NSFetchedResultsController(fetchRequest: NSFetchRequest(entityName: String(describing: query.entity)),
                                        managedObjectContext: managedObjectContext,
                                        sectionNameKeyPath: nil,
-                                       cacheName: nil)) as? Observable<[NSManagedObject]>
+                                       cacheName: nil)) as? Observable<[T]>
     }
 }
 
 final class SqliteStorage<T: NSManagedObject>: Storage {
-    internal var provoder: ObjectProvider = ObjectProvider()
+    internal var provider: ObjectProvider = ObjectProvider()
 
     private let momdName: String
     private let sqlFileUrl: URL?
@@ -70,7 +84,7 @@ final class SqliteStorage<T: NSManagedObject>: Storage {
     init(momdName: String = Bundle.main.bundleIdentifier!, sqlFileUrl: URL? = nil) {
         self.momdName = momdName
         self.sqlFileUrl = sqlFileUrl
-        provoder = ManagedObjectProvider(managedObjectContext)
+        provider = ManagedObjectProvider(managedObjectContext)
     }
     
     lazy var managedObjectContext: NSManagedObjectContext = {

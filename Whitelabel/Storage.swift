@@ -17,7 +17,7 @@ class ObjectProvider {
 }
 
 protocol Storage {
-    var provoder: ObjectProvider { get }
+    var provider: ObjectProvider { get }
     func insert(model: Any)
     func remove(model: Any)
     func commit()

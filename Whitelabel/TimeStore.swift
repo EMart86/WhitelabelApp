@@ -8,9 +8,8 @@
 
 import Foundation
 
-struct TimeStore: Store {
-    internal var storage: Storage
-    internal var models: Observable<[Any]>?
-
-    
+final class TimeStore: ManagedObjectStore {
+    init() {
+        super.init(storage: SqliteStorage<Time>(), entity: Time.self, predicate: nil, sortDescriptors: nil)
+    }
 }

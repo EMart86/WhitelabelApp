@@ -2,7 +2,7 @@
 //  Time+CoreDataProperties.swift
 //  
 //
-//  Created by Martin Eberl on 24.04.17.
+//  Created by Martin Eberl on 26.04.17.
 //
 //
 
@@ -12,9 +12,6 @@ import CoreData
 
 extension Time {
 
-//    public class func fetchRequest() -> NSFetchRequest<Time> {
-//        return NSFetchRequest<Time>(entityName: "Time");
-//    }
-
+    @NSManaged public var value: NSDate?
 
 }

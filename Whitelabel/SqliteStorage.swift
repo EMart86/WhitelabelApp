@@ -22,22 +22,33 @@ open class ManagedObjectStore: Store {
     struct ManagedObjectQuery: Query {
         let entity: NSManagedObject.Type
         let predicate: NSPredicate?
-        let sortDescriptors: [NSSortDescriptor]?
+        let sortDescriptors: [NSSortDescriptor]
     }
     
     private(set) var storage: Storage
     private let entity: NSManagedObject.Type
     private let predicate: NSPredicate?
-    private let sortDescriptors: [NSSortDescriptor]?
+    private let sortDescriptors: [NSSortDescriptor]
     
     
-    init(storage: Storage, entity: NSManagedObject.Type, predicate: NSPredicate?, sortDescriptors: [NSSortDescriptor]?) {
+    init(storage: Storage, entity: NSManagedObject.Type, predicate: NSPredicate?, sortDescriptors: [NSSortDescriptor]) {
         self.storage = storage
         self.entity = entity
         self.predicate = predicate
         self.sortDescriptors = sortDescriptors
+        
+        if sortDescriptors.isEmpty {
+            assertionFailure("Fetchrequest requires at least one sort-descriptor")
+        }
     }
     
+    func newInstance<T: NSManagedObject>() -> T? {
+        guard let storage = self.storage as? SqliteStorage,
+            let context = storage.managedObjectContext as? NSManagedObjectContext else {
+                return nil
+        }
+        return T(context: context)
+    }
 }
 
 final class ManagedObjectObservable: Observable<[NSManagedObject]> {
@@ -63,9 +74,10 @@ extension ManagedObjectObservable: NSFetchedResultsControllerDelegate  {
 }
 
 final class ManagedObjectProvider: ObjectProvider {
-    private let managedObjectContext: NSManagedObjectContext
+    let managedObjectContext: NSManagedObjectContext
     init(_ managedObjectContext: NSManagedObjectContext) {
         self.managedObjectContext = managedObjectContext
+        super.init()
     }
     
     override func observable<T: NSManagedObject>(where query: Query) -> Observable<[T]>? {
@@ -73,10 +85,8 @@ final class ManagedObjectProvider: ObjectProvider {
                 assertionFailure("Expecting ManagedObjectStore.ManagedObjectQuery as closure parameter")
                 return nil
         }
-        guard let request: NSFetchRequest<T> = T.fetchRequest() as? NSFetchRequest<T> else {
-            return nil
-        }
-        
+        let entityName = NSStringFromClass(query.entity.self)
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: entityName) as! NSFetchRequest<T>
         request.fetchBatchSize = 20
         request.predicate = query.predicate
         request.sortDescriptors = query.sortDescriptors
@@ -90,15 +100,21 @@ final class ManagedObjectProvider: ObjectProvider {
 }
 
 final class SqliteStorage<T: NSManagedObject>: Storage {
-    internal var provider: ObjectProvider = ObjectProvider()
+    private(set) var provider: ObjectProvider = ObjectProvider()
     
     private let momdName: String
     private let sqlFileUrl: URL?
     
-    init(momdName: String = Bundle.main.bundleIdentifier!, sqlFileUrl: URL? = nil) {
-        self.momdName = momdName
+    init(_ momdName: String? = nil,
+         sqlFileUrl: URL? = nil) {
+        self.momdName = momdName ?? Bundle.main.infoDictionary?["CFBundleName"] as? String ?? ""
         self.sqlFileUrl = sqlFileUrl
+    }
+    
+    func createProvider() -> SqliteStorage<T> {
+        let managedObjectContext = self.managedObjectContext
         provider = ManagedObjectProvider(managedObjectContext)
+        return self
     }
     
     lazy var managedObjectContext: NSManagedObjectContext = {

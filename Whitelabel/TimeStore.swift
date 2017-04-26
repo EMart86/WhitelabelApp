@@ -10,6 +10,6 @@ import Foundation
 
 final class TimeStore: ManagedObjectStore {
     init() {
-        super.init(storage: SqliteStorage<Time>(), entity: Time.self, predicate: nil, sortDescriptors: nil)
+        super.init(storage: SqliteStorage<Time>("Time").createProvider(), entity: Time.self, predicate: nil, sortDescriptors: [NSSortDescriptor(key: "value", ascending: true)])
     }
 }

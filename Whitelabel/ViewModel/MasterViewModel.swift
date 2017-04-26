@@ -133,6 +133,14 @@ class MasterViewModel: MasterViewModelProtocol {
         delegate?.signalUpdate()
     }
     
+    func add() {
+        guard let time = timeStore.newInstance() as? Time else {
+            return
+        }
+        time.value = NSDate()
+        timeStore.add(model: time)
+    }
+    
     //MARK: - Private Methods
     
     

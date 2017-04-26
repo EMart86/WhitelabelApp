@@ -21,6 +21,8 @@ protocol MasterViewModelProtocol: OverviewHeaderViewDelegate {
     
     func did(change searchText: String)
     func didCloseSearch()
+    
+    func add()
 }
 
 protocol MasterViewModelDelegate: class {
@@ -61,10 +63,19 @@ public class MasterViewController: UITableViewController, UISearchBarDelegate {
         super.viewWillAppear(animated)
     }
     
+    @IBAction func addButtonClicked(_ sender: Any) {
+        viewModel?.add()
+    }
     //MARK: - Helper
     
     private func setupUI() {
         refresh()
+        if #available(iOS 10.0, *) {}
+        else if #available(iOS 6.0, *) {
+            let refreshControl = UIRefreshControl()
+            tableView.addSubview(refreshControl)
+            self.refreshControl = refreshControl
+        }
         refreshControl?.addTarget(self, action: #selector(refresh), for: .valueChanged)
         
         tableView.registerHeaderFooterView(xibLoadable: OverviewHeaderView.self)

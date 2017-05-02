@@ -42,12 +42,8 @@ open class ManagedObjectStore: Store {
         }
     }
     
-    func newInstance<T: NSManagedObject>() -> T? {
-        guard let storage = self.storage as? SqliteStorage,
-            let context = storage.managedObjectContext as? NSManagedObjectContext else {
-                return nil
-        }
-        return T(context: context)
+    func new<T>() -> T? {
+        return storage.provider.new()
     }
 }
 
@@ -81,11 +77,11 @@ final class ManagedObjectProvider: ObjectProvider {
     }
     
     override func observable<T: NSManagedObject>(where query: Query) -> Observable<[T]>? {
-        guard let query = query as? ManagedObjectStore.ManagedObjectQuery else {
+        guard let query = query as? ManagedObjectStore.ManagedObjectQuery,
+            let entityName = NSStringFromClass(query.entity.self).components(separatedBy: ".").last else {
                 assertionFailure("Expecting ManagedObjectStore.ManagedObjectQuery as closure parameter")
                 return nil
         }
-        let entityName = NSStringFromClass(query.entity.self)
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: entityName) as! NSFetchRequest<T>
         request.fetchBatchSize = 20
         request.predicate = query.predicate
@@ -97,9 +93,14 @@ final class ManagedObjectProvider: ObjectProvider {
                                                        cacheName: nil)
         return ManagedObjectObservable(controller as! NSFetchedResultsController<NSFetchRequestResult>) as? Observable<[T]>
     }
+    
+    override func new<T: NSManagedObject>() -> T?{
+        return T(context: managedObjectContext)
+    }
 }
 
 final class SqliteStorage<T: NSManagedObject>: Storage {
+
     private(set) var provider: ObjectProvider = ObjectProvider()
     
     private let momdName: String

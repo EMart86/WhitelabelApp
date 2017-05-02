@@ -134,7 +134,7 @@ class MasterViewModel: MasterViewModelProtocol {
     }
     
     func add() {
-        guard let time = timeStore.newInstance() as? Time else {
+        guard let time: Time = timeStore.new() else {
             return
         }
         time.value = NSDate()

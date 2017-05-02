@@ -14,6 +14,10 @@ open class ObjectProvider {
     func observable<ObservableValue>(where query: Query) -> Observable<[ObservableValue]>? {
         return nil
     }
+    
+    func new<T>() -> T?{
+        return nil
+    }
 }
 
 protocol Storage {

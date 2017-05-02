@@ -11,7 +11,8 @@ import Foundation
 protocol Store {
     func models<T>() -> Observable<[T]>?
     var storage: Storage { get }
-    
+
+    func new<T>() -> T?
     func add(model: Any)
     func remove(model: Any)
 }

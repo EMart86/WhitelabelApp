@@ -2,14 +2,15 @@
 //  Time+CoreDataClass.swift
 //  
 //
-//  Created by Martin Eberl on 24.04.17.
+//  Created by Martin Eberl on 02.05.17.
 //
+//  This file was automatically generated and should not be edited.
 //
 
 import Foundation
 import CoreData
 
-@objc(Time)
+
 public class Time: NSManagedObject {
 
 }

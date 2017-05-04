@@ -37,7 +37,7 @@ class MasterViewModel: MasterViewModelProtocol {
             self?.content = models
             self?.delegate?.signalUpdate()
         }
-        
+        setupContent()
         if LocationProvider.authorizationStatus == .authorizedWhenInUse {
             locationProvider?.delegate = self
         }
@@ -153,11 +153,9 @@ class MasterViewModel: MasterViewModelProtocol {
     }
     
     private func setupContent() {
-        if loader != nil {
-            sections = [
-                Section(title: "Section 1", action: "Show more", content: nil)
-            ]
-        }
+        sections = [
+                Section(title: "Section 1", action: "Show more", content: timeStore.models()?.value)
+        ]
     }
     
     private func stopLocationUpdates() {

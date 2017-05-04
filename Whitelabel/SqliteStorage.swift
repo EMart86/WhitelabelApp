@@ -9,20 +9,20 @@
 import Foundation
 import CoreData
 
-open class ManagedObjectStore: Store {
-    private var observableModels: Observable<[NSManagedObject]>?
+struct ManagedObjectQuery: Query {
+    let entity: NSManagedObject.Type
+    let predicate: NSPredicate?
+    let sortDescriptors: [NSSortDescriptor]
+}
+
+open class ManagedObjectStore<AnyManagedObject: NSManagedObject>: Store {
+    private var observableModels: Observable<[AnyManagedObject]>?
     
     func models<T>() -> Observable<[T]>? {
         if observableModels == nil {
             observableModels = storage.provider.observable(where: ManagedObjectQuery(entity: entity, predicate: predicate, sortDescriptors: sortDescriptors))
         }
         return observableModels as? Observable<[T]>
-    }
-    
-    struct ManagedObjectQuery: Query {
-        let entity: NSManagedObject.Type
-        let predicate: NSPredicate?
-        let sortDescriptors: [NSSortDescriptor]
     }
     
     private(set) var storage: Storage
@@ -47,25 +47,31 @@ open class ManagedObjectStore: Store {
     }
 }
 
-final class ManagedObjectObservable: Observable<[NSManagedObject]> {
-    let fetchedResultsController: NSFetchedResultsController<NSFetchRequestResult>
-    init(_ fetchedResultsController: NSFetchedResultsController<NSFetchRequestResult>) {
+final class ManagedObjectObservable<T: NSManagedObject>: Observable<[T]>, NSFetchedResultsControllerDelegate {
+    private let fetchedResultsController: NSFetchedResultsController<T>
+    init(_ fetchedResultsController: NSFetchedResultsController<T>) {
         self.fetchedResultsController = fetchedResultsController
         super.init()
-        value = fetchedResultsController.fetchedObjects as? [NSManagedObject]
         fetchedResultsController.delegate = self
         do {
             try fetchedResultsController.performFetch()
+            value = fetchedResultsController.fetchedObjects
         } catch {
             let nserror = error as NSError
             fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
         }
     }
-}
-
-extension ManagedObjectObservable: NSFetchedResultsControllerDelegate  {
-    @nonobjc public func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
-        value = fetchedResultsController.fetchedObjects as! [NSManagedObject]?
+    
+    public func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        print("")
+    }
+    
+    public func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        print("")
+    }
+    
+    public func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        value = fetchedResultsController.fetchedObjects
     }
 }
 
@@ -77,21 +83,21 @@ final class ManagedObjectProvider: ObjectProvider {
     }
     
     override func observable<T: NSManagedObject>(where query: Query) -> Observable<[T]>? {
-        guard let query = query as? ManagedObjectStore.ManagedObjectQuery,
+        guard let query = query as? ManagedObjectQuery,
             let entityName = NSStringFromClass(query.entity.self).components(separatedBy: ".").last else {
                 assertionFailure("Expecting ManagedObjectStore.ManagedObjectQuery as closure parameter")
                 return nil
         }
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: entityName) as! NSFetchRequest<T>
-        request.fetchBatchSize = 20
+        let request = NSFetchRequest<T>(entityName: entityName)
+        //request.fetchBatchSize = 20
         request.predicate = query.predicate
         request.sortDescriptors = query.sortDescriptors
         
         let controller = NSFetchedResultsController<T>(fetchRequest: request,
                                                        managedObjectContext: managedObjectContext,
                                                        sectionNameKeyPath: nil,
-                                                       cacheName: nil)
-        return ManagedObjectObservable(controller as! NSFetchedResultsController<NSFetchRequestResult>) as? Observable<[T]>
+                                                       cacheName: "Master")
+        return ManagedObjectObservable<T>(controller)
     }
     
     override func new<T: NSManagedObject>() -> T?{
@@ -106,9 +112,9 @@ final class SqliteStorage<T: NSManagedObject>: Storage {
     private let momdName: String
     private let sqlFileUrl: URL?
     
-    init(_ momdName: String? = nil,
+    init(_ momdName: String,
          sqlFileUrl: URL? = nil) {
-        self.momdName = momdName ?? Bundle.main.infoDictionary?["CFBundleName"] as? String ?? ""
+        self.momdName = momdName
         self.sqlFileUrl = sqlFileUrl
     }
     

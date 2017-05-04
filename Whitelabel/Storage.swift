@@ -11,7 +11,7 @@ import Foundation
 protocol Query {
 }
 open class ObjectProvider {
-    func observable<ObservableValue>(where query: Query) -> Observable<[ObservableValue]>? {
+    func observable<T>(where query: Query) -> Observable<[T]>? {
         return nil
     }
     

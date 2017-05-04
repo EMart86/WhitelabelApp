@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class TimeStore: ManagedObjectStore {
+final class TimeStore: ManagedObjectStore<Time> {
     init() {
         super.init(storage: SqliteStorage<Time>("TimeModel").createProvider(), entity: Time.self, predicate: nil, sortDescriptors: [NSSortDescriptor(key: "value", ascending: true)])
     }

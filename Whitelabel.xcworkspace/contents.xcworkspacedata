@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Whitelabel/Time+CoreDataClass.swift">
-   </FileRef>
-   <FileRef
-      location = "group:Whitelabel/Time+CoreDataProperties.swift">
-   </FileRef>
-   <FileRef
       location = "group:/Users/martineberl/Apps/Whitelabel/Whitelabel.xcodeproj">
    </FileRef>
    <FileRef

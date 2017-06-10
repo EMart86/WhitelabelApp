@@ -27,14 +27,14 @@
 		580EAA901E941FE400AD2345 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580EAA8F1E941FE400AD2345 /* Store.swift */; };
 		58231E2A1EEC7C5600C27968 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58231E291EEC7C5600C27968 /* Config.swift */; };
 		58231E2C1EEC7F4700C27968 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58231E2B1EEC7F4700C27968 /* BaseViewModel.swift */; };
+		58231E301EEC81AD00C27968 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58231E2E1EEC81AD00C27968 /* Images.swift */; };
+		58231E311EEC81AD00C27968 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58231E2F1EEC81AD00C27968 /* Storyboards.swift */; };
 		585C90201E6DFC8D00A3B0E9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 585C901E1E6DFC8D00A3B0E9 /* Info.plist */; };
 		585C90251E6DFC9A00A3B0E9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 585C90231E6DFC9A00A3B0E9 /* Info.plist */; };
 		586A2FC61E6E103300FC18FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 586A2FC21E6E103300FC18FF /* LaunchScreen.storyboard */; };
 		586A2FC71E6E103300FC18FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 586A2FC41E6E103300FC18FF /* Main.storyboard */; };
 		58DEEE721E6E0B8C00B9641C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DEEE4F1E6E0B8C00B9641C /* AppDelegate.swift */; };
 		58DEEE731E6E0B8C00B9641C /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DEEE501E6E0B8C00B9641C /* Dependencies.swift */; };
-		58DEEE741E6E0B8C00B9641C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58DEEE521E6E0B8C00B9641C /* LaunchScreen.storyboard */; };
-		58DEEE751E6E0B8C00B9641C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58DEEE541E6E0B8C00B9641C /* Main.storyboard */; };
 		58DEEE761E6E0B8C00B9641C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DEEE571E6E0B8C00B9641C /* DetailViewController.swift */; };
 		58DEEE771E6E0B8C00B9641C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DEEE581E6E0B8C00B9641C /* MapViewController.swift */; };
 		58DEEE791E6E0B8C00B9641C /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DEEE5A1E6E0B8C00B9641C /* MasterViewController.swift */; };
@@ -97,6 +97,8 @@
 		580EAA8F1E941FE400AD2345 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Store.swift; path = Store/Store.swift; sourceTree = "<group>"; };
 		58231E291EEC7C5600C27968 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		58231E2B1EEC7F4700C27968 /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		58231E2E1EEC81AD00C27968 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		58231E2F1EEC81AD00C27968 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		585C8F691E64A87B00A3B0E9 /* Whitelabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whitelabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		585C8F821E64A87B00A3B0E9 /* WhitelabelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhitelabelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		585C8F8D1E64A87B00A3B0E9 /* WhitelabelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhitelabelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,8 +109,6 @@
 		586A2FC51E6E103300FC18FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Whitelabel/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		58DEEE4F1E6E0B8C00B9641C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58DEEE501E6E0B8C00B9641C /* Dependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
-		58DEEE531E6E0B8C00B9641C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		58DEEE551E6E0B8C00B9641C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		58DEEE571E6E0B8C00B9641C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		58DEEE581E6E0B8C00B9641C /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		58DEEE5A1E6E0B8C00B9641C /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -234,7 +234,6 @@
 			isa = PBXGroup;
 			children = (
 				58DEEE4E1E6E0B8C00B9641C /* Application */,
-				58DEEE511E6E0B8C00B9641C /* Base.lproj */,
 				58DEEE561E6E0B8C00B9641C /* Controller */,
 				58DEEE5C1E6E0B8C00B9641C /* Location */,
 				58DEEE5E1E6E0B8C00B9641C /* Models */,
@@ -277,15 +276,6 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
-		58DEEE511E6E0B8C00B9641C /* Base.lproj */ = {
-			isa = PBXGroup;
-			children = (
-				58DEEE521E6E0B8C00B9641C /* LaunchScreen.storyboard */,
-				58DEEE541E6E0B8C00B9641C /* Main.storyboard */,
-			);
-			path = Base.lproj;
-			sourceTree = "<group>";
-		};
 		58DEEE561E6E0B8C00B9641C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -324,6 +314,8 @@
 		58DEEE611E6E0B8C00B9641C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				58231E2E1EEC81AD00C27968 /* Images.swift */,
+				58231E2F1EEC81AD00C27968 /* Storyboards.swift */,
 				58DEEE621E6E0B8C00B9641C /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -394,6 +386,7 @@
 			buildConfigurationList = 585C8F961E64A87B00A3B0E9 /* Build configuration list for PBXNativeTarget "Whitelabel" */;
 			buildPhases = (
 				4B75482EE54F0F59FA86CD66 /* [CP] Check Pods Manifest.lock */,
+				58231E2D1EEC80A100C27968 /* SwiftGen */,
 				585C8F651E64A87B00A3B0E9 /* Sources */,
 				585C8F661E64A87B00A3B0E9 /* Frameworks */,
 				585C8F671E64A87B00A3B0E9 /* Resources */,
@@ -503,13 +496,11 @@
 				58DEEE7A1E6E0B8C00B9641C /* Info.plist in Resources */,
 				58DEEE801E6E0B8C00B9641C /* ListView.storyboard in Resources */,
 				580EAA8B1E92E44500AD2345 /* default.xcconfig in Resources */,
-				58DEEE741E6E0B8C00B9641C /* LaunchScreen.storyboard in Resources */,
 				58DEEE7F1E6E0B8C00B9641C /* release.xcconfig in Resources */,
 				58DEEE811E6E0B8C00B9641C /* MapView.storyboard in Resources */,
 				58DEEE861E6E0B8C00B9641C /* ViewCell.xib in Resources */,
 				586A2FC71E6E103300FC18FF /* Main.storyboard in Resources */,
 				58DEEE831E6E0B8C00B9641C /* OverviewHeaderView.xib in Resources */,
-				58DEEE751E6E0B8C00B9641C /* Main.storyboard in Resources */,
 				586A2FC61E6E103300FC18FF /* LaunchScreen.storyboard in Resources */,
 				58DEEE7E1E6E0B8C00B9641C /* debug.xcconfig in Resources */,
 				58DEEE7D1E6E0B8C00B9641C /* Assets.xcassets in Resources */,
@@ -593,6 +584,20 @@
 			shellPath = /bin/sh;
 			shellScript = "if [ $CONFIGURATION == Release ]; then\necho \"Bumping build number...\"\nplist=${PROJECT_DIR}/${INFOPLIST_FILE}\n\n# increment the build number (ie 115 to 116)\nbuildnum=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${plist}\")\nif [[ \"${buildnum}\" == \"\" ]]; then\necho \"No build number in $plist\"\nexit 2\nfi\n\nbuildnum=$(expr $buildnum + 1)\n/usr/libexec/Plistbuddy -c \"Set CFBundleVersion $buildnum\" \"${plist}\"\necho \"Bumped build number to $buildnum\"\n\nelse\necho $CONFIGURATION \" build - Not bumping build number.\"\nfi";
 		};
+		58231E2D1EEC80A100C27968 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$PODS_ROOT/SwiftGen/bin/swiftgen images -t swift3 --output $TARGET_NAME/Images.swift\n$PODS_ROOT/SwiftGen/bin/swiftgen storyboards -t swift3 --output $TARGET_NAME/Storyboards.swift";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -624,7 +629,9 @@
 				58231E2C1EEC7F4700C27968 /* BaseViewModel.swift in Sources */,
 				580EAA901E941FE400AD2345 /* Store.swift in Sources */,
 				580563111EBBD0100054866E /* Time+CoreDataClass.swift in Sources */,
+				58231E311EEC81AD00C27968 /* Storyboards.swift in Sources */,
 				580563081EBBCFDB0054866E /* SqliteStorage.swift in Sources */,
+				58231E301EEC81AD00C27968 /* Images.swift in Sources */,
 				580563121EBBD0100054866E /* Time+CoreDataProperties.swift in Sources */,
 				58DEEE821E6E0B8C00B9641C /* OverviewHeaderView.swift in Sources */,
 				580961541EA4FF43004F080A /* Observable.swift in Sources */,
@@ -677,22 +684,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				586A2FC51E6E103300FC18FF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		58DEEE521E6E0B8C00B9641C /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				58DEEE531E6E0B8C00B9641C /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		58DEEE541E6E0B8C00B9641C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				58DEEE551E6E0B8C00B9641C /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

@@ -25,6 +25,7 @@
 		580EAA8B1E92E44500AD2345 /* default.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 580EAA8A1E92E44500AD2345 /* default.xcconfig */; };
 		580EAA8D1E92EA1E00AD2345 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580EAA8C1E92EA1E00AD2345 /* Appearance.swift */; };
 		580EAA901E941FE400AD2345 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580EAA8F1E941FE400AD2345 /* Store.swift */; };
+		58231E2A1EEC7C5600C27968 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58231E291EEC7C5600C27968 /* Config.swift */; };
 		585C90201E6DFC8D00A3B0E9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 585C901E1E6DFC8D00A3B0E9 /* Info.plist */; };
 		585C90251E6DFC9A00A3B0E9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 585C90231E6DFC9A00A3B0E9 /* Info.plist */; };
 		586A2FC61E6E103300FC18FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 586A2FC21E6E103300FC18FF /* LaunchScreen.storyboard */; };
@@ -94,6 +95,7 @@
 		580EAA8A1E92E44500AD2345 /* default.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = default.xcconfig; sourceTree = "<group>"; };
 		580EAA8C1E92EA1E00AD2345 /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		580EAA8F1E941FE400AD2345 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Store.swift; path = Store/Store.swift; sourceTree = "<group>"; };
+		58231E291EEC7C5600C27968 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		585C8F691E64A87B00A3B0E9 /* Whitelabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whitelabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		585C8F821E64A87B00A3B0E9 /* WhitelabelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhitelabelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		585C8F8D1E64A87B00A3B0E9 /* WhitelabelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhitelabelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -270,6 +272,7 @@
 				58DEEE4F1E6E0B8C00B9641C /* AppDelegate.swift */,
 				58DEEE501E6E0B8C00B9641C /* Dependencies.swift */,
 				580EAA8C1E92EA1E00AD2345 /* Appearance.swift */,
+				58231E291EEC7C5600C27968 /* Config.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -600,6 +603,7 @@
 			files = (
 				580EAA871E92E09F00AD2345 /* UIColor+AppColors.swift in Sources */,
 				580563091EBBCFDB0054866E /* Storage.swift in Sources */,
+				58231E2A1EEC7C5600C27968 /* Config.swift in Sources */,
 				58DEEE791E6E0B8C00B9641C /* MasterViewController.swift in Sources */,
 				58DEEE761E6E0B8C00B9641C /* DetailViewController.swift in Sources */,
 				58DEEE841E6E0B8C00B9641C /* StoryboardLoader.swift in Sources */,

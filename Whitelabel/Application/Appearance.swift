@@ -14,10 +14,6 @@ final class Appearance {
     let defaultColor: UIColor?
     
     private init() {
-        if let defaultColor = Bundle.main.infoDictionary?["DEFAULT_COLOR"] as? String {
-            self.defaultColor = UIColor(hex: defaultColor)
-        } else {
-            defaultColor = nil
-        }
+        defaultColor = UIColor(hex: Config.primaryAppColorHex ?? "")
     }
 }

@@ -26,6 +26,7 @@
 		580EAA8D1E92EA1E00AD2345 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580EAA8C1E92EA1E00AD2345 /* Appearance.swift */; };
 		580EAA901E941FE400AD2345 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580EAA8F1E941FE400AD2345 /* Store.swift */; };
 		58231E2A1EEC7C5600C27968 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58231E291EEC7C5600C27968 /* Config.swift */; };
+		58231E2C1EEC7F4700C27968 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58231E2B1EEC7F4700C27968 /* BaseViewModel.swift */; };
 		585C90201E6DFC8D00A3B0E9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 585C901E1E6DFC8D00A3B0E9 /* Info.plist */; };
 		585C90251E6DFC9A00A3B0E9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 585C90231E6DFC9A00A3B0E9 /* Info.plist */; };
 		586A2FC61E6E103300FC18FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 586A2FC21E6E103300FC18FF /* LaunchScreen.storyboard */; };
@@ -96,6 +97,7 @@
 		580EAA8C1E92EA1E00AD2345 /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		580EAA8F1E941FE400AD2345 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Store.swift; path = Store/Store.swift; sourceTree = "<group>"; };
 		58231E291EEC7C5600C27968 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		58231E2B1EEC7F4700C27968 /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		585C8F691E64A87B00A3B0E9 /* Whitelabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whitelabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		585C8F821E64A87B00A3B0E9 /* WhitelabelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhitelabelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		585C8F8D1E64A87B00A3B0E9 /* WhitelabelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhitelabelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,7 +112,6 @@
 		58DEEE551E6E0B8C00B9641C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		58DEEE571E6E0B8C00B9641C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		58DEEE581E6E0B8C00B9641C /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		58DEEE591E6E0B8C00B9641C /* MapViewController.textClipping */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MapViewController.textClipping; sourceTree = "<group>"; };
 		58DEEE5A1E6E0B8C00B9641C /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		58DEEE5B1E6E0B8C00B9641C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		58DEEE5D1E6E0B8C00B9641C /* LocationProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationProvider.swift; sourceTree = "<group>"; };
@@ -291,7 +292,6 @@
 			children = (
 				58DEEE571E6E0B8C00B9641C /* DetailViewController.swift */,
 				58DEEE581E6E0B8C00B9641C /* MapViewController.swift */,
-				58DEEE591E6E0B8C00B9641C /* MapViewController.textClipping */,
 				58DEEE5A1E6E0B8C00B9641C /* MasterViewController.swift */,
 			);
 			path = Controller;
@@ -359,6 +359,7 @@
 		58DEEE6F1E6E0B8C00B9641C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				58231E2B1EEC7F4700C27968 /* BaseViewModel.swift */,
 				58DEEE701E6E0B8C00B9641C /* MapViewModel.swift */,
 				58DEEE711E6E0B8C00B9641C /* MasterViewModel.swift */,
 			);
@@ -505,7 +506,6 @@
 				580EAA8B1E92E44500AD2345 /* default.xcconfig in Resources */,
 				58DEEE741E6E0B8C00B9641C /* LaunchScreen.storyboard in Resources */,
 				58DEEE7F1E6E0B8C00B9641C /* release.xcconfig in Resources */,
-				58DEEE781E6E0B8C00B9641C /* MapViewController.textClipping in Resources */,
 				58DEEE811E6E0B8C00B9641C /* MapView.storyboard in Resources */,
 				58DEEE861E6E0B8C00B9641C /* ViewCell.xib in Resources */,
 				586A2FC71E6E103300FC18FF /* Main.storyboard in Resources */,
@@ -622,6 +622,7 @@
 				580EAA841E92E09F00AD2345 /* NSMutableAttributesString+Font.swift in Sources */,
 				580EAA851E92E09F00AD2345 /* String+HTMLAttributedString.swift in Sources */,
 				58DEEE721E6E0B8C00B9641C /* AppDelegate.swift in Sources */,
+				58231E2C1EEC7F4700C27968 /* BaseViewModel.swift in Sources */,
 				580EAA901E941FE400AD2345 /* Store.swift in Sources */,
 				580563111EBBD0100054866E /* Time+CoreDataClass.swift in Sources */,
 				580563081EBBCFDB0054866E /* SqliteStorage.swift in Sources */,

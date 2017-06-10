@@ -16,7 +16,7 @@ class Dependencies {
     let timeStore: TimeStore
     
     private init() {
-        if let urlString = Bundle.main.infoDictionary?["LOAD_PATH"] as? String,
+        if let urlString = Config.apiBasePath,
             let url = URL(string: urlString) {
             loader = ContentLoader(url: url)
         } else {

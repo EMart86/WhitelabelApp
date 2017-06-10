@@ -37,7 +37,6 @@
 		58DEEE751E6E0B8C00B9641C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58DEEE541E6E0B8C00B9641C /* Main.storyboard */; };
 		58DEEE761E6E0B8C00B9641C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DEEE571E6E0B8C00B9641C /* DetailViewController.swift */; };
 		58DEEE771E6E0B8C00B9641C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DEEE581E6E0B8C00B9641C /* MapViewController.swift */; };
-		58DEEE781E6E0B8C00B9641C /* MapViewController.textClipping in Resources */ = {isa = PBXBuildFile; fileRef = 58DEEE591E6E0B8C00B9641C /* MapViewController.textClipping */; };
 		58DEEE791E6E0B8C00B9641C /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DEEE5A1E6E0B8C00B9641C /* MasterViewController.swift */; };
 		58DEEE7A1E6E0B8C00B9641C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58DEEE5B1E6E0B8C00B9641C /* Info.plist */; };
 		58DEEE7B1E6E0B8C00B9641C /* LocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DEEE5D1E6E0B8C00B9641C /* LocationProvider.swift */; };

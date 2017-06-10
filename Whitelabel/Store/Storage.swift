@@ -10,14 +10,18 @@ import Foundation
 
 protocol Query {
 }
-class ObjectProvider {
-    func observable<ObservableValue>(where query: Query) -> Observable<[ObservableValue]>? {
+open class ObjectProvider {
+    func observable<T>(where query: Query) -> Observable<[T]>? {
+        return nil
+    }
+    
+    func new<T>() -> T?{
         return nil
     }
 }
 
 protocol Storage {
-    var provoder: ObjectProvider { get }
+    var provider: ObjectProvider { get }
     func insert(model: Any)
     func remove(model: Any)
     func commit()

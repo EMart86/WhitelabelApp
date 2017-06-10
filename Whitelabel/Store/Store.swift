@@ -9,9 +9,10 @@
 import Foundation
 
 protocol Store {
-    var models: Observable<[Any]>? { get }
+    func models<T>() -> Observable<[T]>?
     var storage: Storage { get }
-    
+
+    func new<T>() -> T?
     func add(model: Any)
     func remove(model: Any)
 }
@@ -25,14 +26,5 @@ extension Store {
     func remove(model: Any) {
         storage.remove(model: model)
         storage.commit()
-    }
-}
-
-struct ObjectStore: Store {
-    private(set) var storage: Storage
-    private(set) var models: Observable<[Any]>? = nil
-    
-    init(storage: Storage) {
-        self.storage = storage
     }
 }

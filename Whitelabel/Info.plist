@@ -18,8 +18,13 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
-	<key>CONTENT_PATH</key>
-	<string>$(XCC_CONTENT_URL)</string>
+	<key>CONFIG</key>
+	<dict>
+		<key>API_BASE_PATH</key>
+		<string>$(XCC_API_BASE_PATH)</string>
+		<key>PRIMARY_APP_COLOR</key>
+		<string>$(XCC_PRIMARY_APP_COLOR)</string>
+	</dict>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>

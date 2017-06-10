@@ -5,6 +5,7 @@ use_frameworks!
 target 'Whitelabel' do
     pod 'AlamofireObjectMapper', '~> 4.0'
     pod 'Kingfisher'
+    pod 'SwiftGen'
 end
 
 post_install do |installer|

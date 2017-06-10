@@ -23,12 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
         let masterNavigationController = splitViewController.viewControllers[0] as! UINavigationController
         let controller = masterNavigationController.topViewController as! MasterViewController
-        
-        if
-            let loader = Dependencies.shared.loader,
-            let locationProvider = Dependencies.shared.locationProvider {
-            controller.viewModel = MasterViewModel(loader: loader, locationProvider: locationProvider)
-        }
+        controller.viewModel = MasterViewModel(timeStore: Dependencies.shared.timeStore)
+    
         return true
     }
 

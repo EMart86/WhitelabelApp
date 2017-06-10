@@ -12,59 +12,67 @@ import CoreLocation
 import ObjectMapper
 
 class MasterViewModel: MasterViewModelProtocol {
+    internal func load() {}
     
     private let loader: ContentLoader?
     fileprivate let locationProvider: LocationProvider?
     
     let title = "Master"
     
-    private(set) var content: [Content]?
+    private(set) var content: [Time]?
     private(set) var sections: [Section]?
     private(set) var isLoading: Bool = false
     private var timer: Timer?
+    private let timeStore: TimeStore
     
     weak var delegate: MasterViewModelDelegate?
     
-    init(loader: ContentLoader, locationProvider: LocationProvider) {
+    init(loader: ContentLoader? = nil, locationProvider: LocationProvider? = nil, timeStore: TimeStore) {
         self.loader = loader
         self.locationProvider = locationProvider
+        self.timeStore = timeStore
+        content = timeStore.models()?.value
         
+        timeStore.models()?.onValueChanged {[weak self] (models: [Time]) in
+            self?.content = models
+            self?.delegate?.signalUpdate()
+        }
+        setupContent()
         if LocationProvider.authorizationStatus == .authorizedWhenInUse {
-            locationProvider.delegate = self
+            locationProvider?.delegate = self
         }
     }
     
-    init(content: [Content]) {
+    init(content: [Any], timeStore: TimeStore) {
+        self.content = nil
         self.loader = nil
         self.locationProvider = nil
-        self.content = content
-    
-        setupContent()
+        self.timeStore = timeStore
     }
     
-    func load() {
-        guard let loader = loader else { return }
-        
-        locationProvider?.startLocationUpdate()
-        
-        isLoading = true
-        delegate?.signalUpdate()
-        
-        loader.load(contentResponse: {[weak self] response in
-            self?.isLoading = false
-            switch response {
-            case .success(let content):
-                self?.content = content
-                self?.setupContent()
-                break
-            case .fail(let error):
-                self?.content = nil
-                self?.setupContent()
-                break
-            }
-            self?.delegate?.signalUpdate()
-        })
-    }
+//    func load() {
+//        guard let loader = loader else { return }
+//        
+//        locationProvider?.startLocationUpdate()
+//        
+//        isLoading = true
+//        delegate?.signalUpdate()
+//        
+//        loader.load(contentResponse: {[weak self] response in
+//            self?.isLoading = false
+//            switch response {
+//            case .success(let content):
+//                self?.content = content
+//                self?.setupContent()
+//                break
+//            case .fail(let error):
+//                self?.content = nil
+//                self?.setupContent()
+//                break
+//            }
+//            self?.delegate?.signalUpdate()
+//        })
+//    }
     
     var numberOfItems: Int? {
         guard let sections = sections else {
@@ -125,6 +133,14 @@ class MasterViewModel: MasterViewModelProtocol {
         delegate?.signalUpdate()
     }
     
+    func add() {
+        guard let time: Time = timeStore.new() else {
+            return
+        }
+        time.value = NSDate()
+        timeStore.add(model: time)
+    }
+    
     //MARK: - Private Methods
     
     
@@ -137,11 +153,9 @@ class MasterViewModel: MasterViewModelProtocol {
     }
     
     private func setupContent() {
-        if loader != nil {
-            sections = [
-                Section(title: "Section 1", action: "Show more", content: nil)
-            ]
-        }
+        sections = [
+                Section(title: "Section 1", action: "Show more", content: timeStore.models()?.value)
+        ]
     }
     
     private func stopLocationUpdates() {

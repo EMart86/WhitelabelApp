@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIColor {
-    static var appColor: UIColor {
-        return Appearance.shared.defaultColor ?? .white
+    static var primaryColor: UIColor {
+        return UIColor(hex: Config.primaryAppColorHex ?? "") ?? .white
     }
 }

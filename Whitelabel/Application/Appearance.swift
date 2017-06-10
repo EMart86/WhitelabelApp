@@ -14,6 +14,6 @@ final class Appearance {
     let defaultColor: UIColor?
     
     private init() {
-        defaultColor = UIColor(hex: Config.primaryAppColorHex ?? "")
+        defaultColor = UIColor.primaryColor
     }
 }

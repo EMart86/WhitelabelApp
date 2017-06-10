@@ -27,8 +27,10 @@
 		580EAA901E941FE400AD2345 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580EAA8F1E941FE400AD2345 /* Store.swift */; };
 		58231E2A1EEC7C5600C27968 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58231E291EEC7C5600C27968 /* Config.swift */; };
 		58231E2C1EEC7F4700C27968 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58231E2B1EEC7F4700C27968 /* BaseViewModel.swift */; };
-		58231E301EEC81AD00C27968 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58231E2E1EEC81AD00C27968 /* Images.swift */; };
-		58231E311EEC81AD00C27968 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58231E2F1EEC81AD00C27968 /* Storyboards.swift */; };
+		58231E371EEC862C00C27968 /* colors.txt in Resources */ = {isa = PBXBuildFile; fileRef = 58231E361EEC862C00C27968 /* colors.txt */; };
+		58231E3B1EEC888F00C27968 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58231E381EEC888F00C27968 /* Colors.swift */; };
+		58231E3C1EEC888F00C27968 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58231E391EEC888F00C27968 /* Images.swift */; };
+		58231E3D1EEC888F00C27968 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58231E3A1EEC888F00C27968 /* Storyboards.swift */; };
 		585C90201E6DFC8D00A3B0E9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 585C901E1E6DFC8D00A3B0E9 /* Info.plist */; };
 		585C90251E6DFC9A00A3B0E9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 585C90231E6DFC9A00A3B0E9 /* Info.plist */; };
 		586A2FC61E6E103300FC18FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 586A2FC21E6E103300FC18FF /* LaunchScreen.storyboard */; };
@@ -97,8 +99,10 @@
 		580EAA8F1E941FE400AD2345 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Store.swift; path = Store/Store.swift; sourceTree = "<group>"; };
 		58231E291EEC7C5600C27968 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		58231E2B1EEC7F4700C27968 /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
-		58231E2E1EEC81AD00C27968 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
-		58231E2F1EEC81AD00C27968 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		58231E361EEC862C00C27968 /* colors.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = colors.txt; sourceTree = "<group>"; };
+		58231E381EEC888F00C27968 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = Whitelabel/Colors.swift; sourceTree = SOURCE_ROOT; };
+		58231E391EEC888F00C27968 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Images.swift; path = Whitelabel/Images.swift; sourceTree = SOURCE_ROOT; };
+		58231E3A1EEC888F00C27968 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Storyboards.swift; path = Whitelabel/Storyboards.swift; sourceTree = SOURCE_ROOT; };
 		585C8F691E64A87B00A3B0E9 /* Whitelabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whitelabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		585C8F821E64A87B00A3B0E9 /* WhitelabelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhitelabelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		585C8F8D1E64A87B00A3B0E9 /* WhitelabelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhitelabelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -314,8 +318,10 @@
 		58DEEE611E6E0B8C00B9641C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				58231E2E1EEC81AD00C27968 /* Images.swift */,
-				58231E2F1EEC81AD00C27968 /* Storyboards.swift */,
+				58231E381EEC888F00C27968 /* Colors.swift */,
+				58231E391EEC888F00C27968 /* Images.swift */,
+				58231E3A1EEC888F00C27968 /* Storyboards.swift */,
+				58231E361EEC862C00C27968 /* colors.txt */,
 				58DEEE621E6E0B8C00B9641C /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -495,6 +501,7 @@
 			files = (
 				58DEEE7A1E6E0B8C00B9641C /* Info.plist in Resources */,
 				58DEEE801E6E0B8C00B9641C /* ListView.storyboard in Resources */,
+				58231E371EEC862C00C27968 /* colors.txt in Resources */,
 				580EAA8B1E92E44500AD2345 /* default.xcconfig in Resources */,
 				58DEEE7F1E6E0B8C00B9641C /* release.xcconfig in Resources */,
 				58DEEE811E6E0B8C00B9641C /* MapView.storyboard in Resources */,
@@ -596,7 +603,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "$PODS_ROOT/SwiftGen/bin/swiftgen images -t swift3 --output $TARGET_NAME/Images.swift\n$PODS_ROOT/SwiftGen/bin/swiftgen storyboards -t swift3 --output $TARGET_NAME/Storyboards.swift";
+			shellScript = "$PODS_ROOT/SwiftGen/bin/swiftgen images -t swift3 --output $TARGET_NAME/Images.swift\n$PODS_ROOT/SwiftGen/bin/swiftgen storyboards -t swift3 --output $TARGET_NAME/Storyboards.swift\n$PODS_ROOT/SwiftGen/bin/swiftgen colors $TARGET_NAME/Resources/colors.txt -t swift3 --output $TARGET_NAME/Colors.swift\n\n#comment out if you use color palette ->\n#$PODS_ROOT/SwiftGen/bin/swiftgen colors ~/Library/Colors/$TARGET_NAME.clr -t swift3 --output $TARGET_NAME/Colors.swift";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -606,9 +613,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				580EAA871E92E09F00AD2345 /* UIColor+AppColors.swift in Sources */,
+				58231E3B1EEC888F00C27968 /* Colors.swift in Sources */,
 				580563091EBBCFDB0054866E /* Storage.swift in Sources */,
+				58231E3C1EEC888F00C27968 /* Images.swift in Sources */,
 				58231E2A1EEC7C5600C27968 /* Config.swift in Sources */,
 				58DEEE791E6E0B8C00B9641C /* MasterViewController.swift in Sources */,
+				58231E3D1EEC888F00C27968 /* Storyboards.swift in Sources */,
 				58DEEE761E6E0B8C00B9641C /* DetailViewController.swift in Sources */,
 				58DEEE841E6E0B8C00B9641C /* StoryboardLoader.swift in Sources */,
 				580EAA8D1E92EA1E00AD2345 /* Appearance.swift in Sources */,
@@ -629,9 +639,7 @@
 				58231E2C1EEC7F4700C27968 /* BaseViewModel.swift in Sources */,
 				580EAA901E941FE400AD2345 /* Store.swift in Sources */,
 				580563111EBBD0100054866E /* Time+CoreDataClass.swift in Sources */,
-				58231E311EEC81AD00C27968 /* Storyboards.swift in Sources */,
 				580563081EBBCFDB0054866E /* SqliteStorage.swift in Sources */,
-				58231E301EEC81AD00C27968 /* Images.swift in Sources */,
 				580563121EBBD0100054866E /* Time+CoreDataProperties.swift in Sources */,
 				58DEEE821E6E0B8C00B9641C /* OverviewHeaderView.swift in Sources */,
 				580961541EA4FF43004F080A /* Observable.swift in Sources */,
